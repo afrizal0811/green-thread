@@ -1,8 +1,11 @@
-import Layout from './Layout'
+import { BrowserRouter } from 'react-router-dom'
+import RouteHandler from './RouteHandler'
 function App() {
   return (
     <div className='App'>
-      <Layout />
+      <BrowserRouter>
+        <RouteHandler />
+      </BrowserRouter>
     </div>
   )
 }
