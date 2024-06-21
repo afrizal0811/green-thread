@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import AboutPage from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ContactPage from './pages/ContactPage'
-import HomePage from './pages/HomePage'
+import HomePage from './pages/home_pages/HomePage'
 import ShopPage from './pages/ShopPage'
 const RouteHandler = () => {
   return (
