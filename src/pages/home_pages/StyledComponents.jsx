@@ -18,7 +18,6 @@ export const StyledHeroImage = styled.div`
 `
 export const StyledHeroWrapper = muiStyled(Box)`
   color: white;
-  width: 100%;
   height: 80vh;
   ${(props) => muiBreakpoints(props, 'xs')} {
     margin-left: 0;
