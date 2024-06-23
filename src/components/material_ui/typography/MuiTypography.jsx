@@ -1,15 +1,27 @@
 import Typography from '@mui/material/Typography'
 import React from 'react'
 const MuiTypography = (props) => {
-  const { children, className, component, noWrap, sx, textAlign, variant } = props
+  const {
+    children,
+    className,
+    component,
+    fontSize,
+    fontWeight,
+    noWrap,
+    sx,
+    textAlign,
+    variant,
+  } = props
   return (
     <Typography
-      component={component}
       className={className}
+      component={component}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
       noWrap={noWrap}
       sx={sx}
-      variant={variant}
       textAlign={textAlign}
+      variant={variant}
     >
       {children}
     </Typography>

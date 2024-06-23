@@ -43,6 +43,7 @@ export const StyledUserMenu = muiStyled(Menu)`
 export const StyledLogoText = muiStyled(Typography)`
   color: inherit;
   fontWeight: 700;
+  margin-top: 10px;
 `
 export const StyledAvatarIcon = muiStyled(IconButton)`
   display: flex; 

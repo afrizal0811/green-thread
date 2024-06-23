@@ -50,8 +50,7 @@ const NavigationMenu = () => {
         height={50}
       />
       <StyledLogoText
-        variant='h6'
-        noWrap
+        variant='h5'
         component='p'
       >
         Green Threads
