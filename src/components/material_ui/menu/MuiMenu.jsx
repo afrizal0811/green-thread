@@ -4,14 +4,15 @@ const MuiMenu = (props) => {
   const {
     anchorEl,
     anchorOrigin,
+    children,
     className,
+    display,
     id,
     keepMounted,
     onClose,
     open,
     sx,
     transformOrigin,
-    children,
   } = props
 
   return (
@@ -19,6 +20,7 @@ const MuiMenu = (props) => {
       anchorEl={anchorEl}
       anchorOrigin={anchorOrigin}
       className={className}
+      display={display}
       id={id}
       keepMounted={keepMounted}
       onClose={onClose}

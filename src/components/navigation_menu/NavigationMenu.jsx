@@ -4,15 +4,20 @@ import Toolbar from '@mui/material/Toolbar'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import imagePath from '../../constants/imagePaths'
-import { Box, Container, Divider, MenuItem, Tooltip } from '../material_ui'
+import {
+  Box,
+  Container,
+  Divider,
+  MenuItem,
+  Tooltip,
+  Menu,
+} from '../material_ui'
 import {
   StyledAppBar,
   StyledAvatar,
   StyledAvatarIcon,
   StyledLogo,
-  StyledLogoBox,
   StyledLogoText,
-  StyledPageBox,
   StyledPagesTrayMenu,
   StyledUserMenu,
 } from './StyledComponents'
@@ -42,7 +47,11 @@ const NavigationMenu = () => {
     navigate(`/${newPage}`)
   }
   const renderLogo = (isXs) => (
-    <StyledLogoBox $isXs={isXs}>
+    <Box
+      display={isXs ? 'none' : 'flex'}
+      alignItems='center'
+      flexGrow={!isXs && 1}
+    >
       <StyledLogo
         src={imagePath.logo}
         alt='logo'
@@ -55,7 +64,7 @@ const NavigationMenu = () => {
       >
         Green Threads
       </StyledLogoText>
-    </StyledLogoBox>
+    </Box>
   )
 
   const mappedPages = pages.map((page) => (
@@ -77,7 +86,10 @@ const NavigationMenu = () => {
   ))
 
   const renderPagesTray = (
-    <StyledPageBox $isXs={true}>
+    <Box
+      flexGrow={{ xs: 1, md: 0 }}
+      display={{ xs: 'flex', md: 'none' }}
+    >
       <IconButton
         size='large'
         onClick={handleOpenNavMenu}
@@ -85,9 +97,10 @@ const NavigationMenu = () => {
       >
         <MenuIcon />
       </IconButton>
-      <StyledPagesTrayMenu
+      <Menu
         anchorEl={anchorElNav}
         anchorOrigin={pageMenu.anchorOrigin}
+        display={{ xs: 'block', md: 'none' }}
         id='menu-appbar'
         keepMounted
         onClose={handleCloseNavMenu}
@@ -95,11 +108,16 @@ const NavigationMenu = () => {
         transformOrigin={pageMenu.transformOrigin}
       >
         {mappedPages}
-      </StyledPagesTrayMenu>
-    </StyledPageBox>
+      </Menu>
+    </Box>
   )
   const renderPageMenu = (
-    <StyledPageBox $isXs={false}>{mappedPages}</StyledPageBox>
+    <Box
+      flexGrow={{ xs: 1, md: 0 }}
+      display={{ xs: 'none', md: 'flex' }}
+    >
+      {mappedPages}
+    </Box>
   )
 
   const renderUserMenu = (

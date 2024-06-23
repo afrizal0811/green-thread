@@ -7,6 +7,7 @@ const MuiBox = (props) => {
     className,
     display,
     flexDirection,
+    flexGrow,
     gap,
     justifyContent,
     sx,
@@ -17,6 +18,7 @@ const MuiBox = (props) => {
       className={className}
       display={display}
       flexDirection={flexDirection}
+      flexGrow={flexGrow}
       gap={gap}
       justifyContent={justifyContent}
       sx={sx}
