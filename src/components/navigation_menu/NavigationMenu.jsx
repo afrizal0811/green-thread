@@ -18,7 +18,6 @@ import {
   StyledAvatarIcon,
   StyledLogo,
   StyledLogoText,
-  StyledPagesTrayMenu,
   StyledUserMenu,
 } from './StyledComponents'
 import { pageMenu, pages, settings, userMenu } from './help'
