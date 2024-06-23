@@ -28,12 +28,6 @@ export const StyledHeroWrapper = muiStyled(Box)`
   }
 `
 
-export const StyledHeroDetail = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`
-
 export const StyledHeroButton = muiStyled(Button)`
   width: 130px;
   padding: 10px;

@@ -3,7 +3,6 @@ import { Box, Typography } from '../../../components/material_ui'
 import imagePath from '../../../constants/imagePaths'
 import {
   StyledHeroButton,
-  StyledHeroDetail,
   StyledHeroImage,
   StyledHeroWrapper,
 } from '../StyledComponents'
@@ -12,21 +11,21 @@ const Hero = () => {
     <Box>
       <StyledHeroImage $src={imagePath.heroImage} />
       <StyledHeroWrapper
+        alignItems={{ xs: 'center', md: 'start' }}
         display='flex'
         flexDirection='column'
-        justifyContent='center'
-        alignItems={{ xs: 'center', md: 'start' }}
         gap='10px'
+        justifyContent='center'
       >
         <Box
+          alignItems={{ xs: 'center', md: 'start' }}
           display='flex'
           flexDirection='column'
-          alignItems={{ xs: 'center', md: 'start' }}
         >
           <Typography
-            variant='h3'
             fontSize={{ xs: '30px', sm: '42px', md: '48px' }}
             fontWeight='300'
+            variant='h3'
           >
             WEAR THE FUTURE
           </Typography>
@@ -38,24 +37,25 @@ const Hero = () => {
             SUSTAIN THE EARTH
           </Typography>
         </Box>
-        <StyledHeroDetail
+        <Box
+          alignItems={{ xs: 'center', md: 'start' }}
           display='flex'
           flexDirection='column'
-          alignItems={{ xs: 'center', md: 'start' }}
+          gap='10px' 
         >
           <Typography
-            textAlign={{ xs: 'center', md: 'left' }}
             fontSize={{ xs: '14px', md: '16px' }}
+            textAlign={{ xs: 'center', md: 'left' }}
           >
             Explore sustainable fashion at Green Threads!
             <br />
             Shop our eco-friendly collection now.
           </Typography>
           <StyledHeroButton
-            variant='contained'
             text='Shop Now'
+            variant='contained'
           />
-        </StyledHeroDetail>
+        </Box>
       </StyledHeroWrapper>
     </Box>
   )
