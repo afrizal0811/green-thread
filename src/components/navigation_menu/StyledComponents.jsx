@@ -2,8 +2,7 @@ import AppBar from '@mui/material/AppBar'
 import IconButton from '@mui/material/IconButton'
 import { styled as muiStyled } from '@mui/material/styles'
 import styled from 'styled-components'
-import Image from '../../components/image/Image'
-import { Avatar, Menu, Typography } from '../material_ui'
+import { Avatar, Image, Menu, Typography } from '../material_ui'
 
 export const StyledLogo = styled(Image)`
   margin-right: 10px;

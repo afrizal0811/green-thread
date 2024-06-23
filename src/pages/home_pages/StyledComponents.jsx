@@ -4,6 +4,7 @@ import { Box, Button } from '../../components/material_ui'
 import colors from '../../constants/colors'
 import muiBreakpoints from '../../utilities/muiBreakpoints'
 
+// =============== HERO ==========================
 export const StyledHeroImage = styled.div`
   position: absolute;
   width: 100vw; /* Half the width of the viewport */
@@ -42,3 +43,5 @@ export const StyledHeroButton = muiStyled(Button)`
     background-color: ${colors.forestGreenDark};
   }
 `
+
+// =============== ABOUT ==========================
