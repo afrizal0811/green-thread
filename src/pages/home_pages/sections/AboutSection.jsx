@@ -1,7 +1,23 @@
 import React from 'react'
 import { Box, Image, Typography } from '../../../components/material_ui'
+import color from '../../../constants/colors'
 import imagePath from '../../../constants/imagePaths'
 const AboutSection = () => {
+  const renderSectionTitle = (
+    <Box
+      display='flex'
+      flexDirection='row'
+      gap
+    >
+      <Typography
+        variant='h4'
+        fontWeight='700'
+      >
+        Welcome to{' '}
+        <span style={{ color: color.forestGreen }}>Green Threads</span>
+      </Typography>
+    </Box>
+  )
   return (
     <Box
       alignItems='center'
@@ -23,16 +39,14 @@ const AboutSection = () => {
           flexWrap='wrap'
           gap='10px'
           justifyContent='center'
-          width={{ xs: 330, sm: 750, md: 500 }}
+          width={{ xs: 330, sm: 570, md: 600 }}
           sx={{ px: '20px' }}
         >
+          {renderSectionTitle}
           <Typography
-            variant='h5'
-            fontWeight='700'
+            fontSize='16px'
+            fontWeight='400'
           >
-            Welcome to Green Threads!
-          </Typography>
-          <Typography>
             Green Threads aims to transform the fashion industry with
             eco-friendly practices. We prioritize using organic and recycled
             materials, ethical production, low-impact dyes, and innovative
