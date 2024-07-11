@@ -13,16 +13,18 @@ const AboutSection = () => {
         alignItems='center'
         display='flex'
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
-        gap='20px'
         justifyContent='space-evenly'
+        gap={{ xs: '20px' }}
         width='100%'
       >
         <Box
           display='flex'
           flexDirection='column'
+          flexWrap='wrap'
           gap='10px'
           justifyContent='center'
-          width={{ xs: 330, sm: 450, xl: 500 }}
+          width={{ xs: 330, sm: 750, md: 500 }}
+          sx={{ px: '20px' }}
         >
           <Typography
             variant='h5'
@@ -40,9 +42,10 @@ const AboutSection = () => {
         </Box>
         <Image
           alt='About'
-          height={{ xs: 200, sm: 280, md: 300 }}
+          height={{ xs: 200, sm: 340, md: 300, lg: 310 }}
           src={imagePath.aboutImage}
-          width={{ xs: 330, sm: 450, md: 500 }}
+          width={{ xs: 330, sm: 550, md: 500, lg: 520 }}
+          sx={{ px: '10px' }}
         />
       </Box>
     </Box>
