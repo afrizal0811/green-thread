@@ -9,6 +9,7 @@ const MuiBox = (props) => {
     display,
     flexDirection,
     flexGrow,
+    flexWrap,
     gap,
     height,
     justifyContent,
@@ -24,6 +25,7 @@ const MuiBox = (props) => {
       display={display}
       flexDirection={flexDirection}
       flexGrow={flexGrow}
+      flexWrap={flexWrap}
       gap={gap}
       height={height}
       justifyContent={justifyContent}
