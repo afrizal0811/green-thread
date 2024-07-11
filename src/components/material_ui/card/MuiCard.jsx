@@ -4,9 +4,9 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 const MuiCard = (props) => {
-  const { alt, src, title, text, height } = props
+  const { alt, src, title, text, height, sx } = props
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={sx}>
       <CardMedia
         component='img'
         alt={alt}

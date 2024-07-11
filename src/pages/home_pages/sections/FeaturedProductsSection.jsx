@@ -31,6 +31,7 @@ const FeaturedProductsSection = () => {
             height='200'
             title={product.title}
             text={product.text}
+            sx={{ maxWidth: '300px' }}
           />
         ))}
       </Box>
