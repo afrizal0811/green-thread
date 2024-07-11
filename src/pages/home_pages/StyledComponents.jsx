@@ -7,7 +7,7 @@ import muiBreakpoints from '../../utilities/muiBreakpoints'
 // =============== HERO ==========================
 export const StyledHeroImage = styled.div`
   position: absolute;
-  width: 100vw; /* Half the width of the viewport */
+  width: 100%;
   height: 80vh; /* 50vh for the square + 25vh for the half-circle */
   border-bottom-left-radius: 50% 25%;
   border-bottom-right-radius: 50% 25%;
@@ -27,7 +27,6 @@ export const StyledHeroWrapper = muiStyled(Box)`
     margin-left: 20px;
   }
 `
-
 export const StyledHeroButton = muiStyled(Button)`
   width: 130px;
   padding: 10px;
@@ -38,4 +37,10 @@ export const StyledHeroButton = muiStyled(Button)`
   }
 `
 
-// =============== ABOUT ==========================
+// =============== FEATURED PRODUCTS ==========================
+
+export const StyledProductsWrapper = muiStyled(Box)`
+background: radial-gradient(circle, rgba(34,139,34,1) 60%, rgba(24,97,24,1) 100%);
+padding: 50px 0;
+margin-top: 30px;
+`

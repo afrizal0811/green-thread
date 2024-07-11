@@ -3,6 +3,7 @@ import React from 'react'
 const MuiTypography = (props) => {
   const {
     children,
+    color,
     className,
     component,
     fontSize,
@@ -15,6 +16,7 @@ const MuiTypography = (props) => {
   return (
     <Typography
       className={className}
+      color={color}
       component={component}
       fontSize={fontSize}
       fontWeight={fontWeight}

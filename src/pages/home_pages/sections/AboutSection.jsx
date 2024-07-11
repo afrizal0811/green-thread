@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Image, Typography } from '../../../components/material_ui'
-import color from '../../../constants/colors'
+import colors from '../../../constants/colors'
 import imagePath from '../../../constants/imagePaths'
 const AboutSection = () => {
   const renderSectionTitle = (
@@ -14,7 +14,7 @@ const AboutSection = () => {
         fontWeight='700'
       >
         Welcome to{' '}
-        <span style={{ color: color.forestGreen }}>Green Threads</span>
+        <span style={{ color: colors.forestGreen }}>Green Threads</span>
       </Typography>
     </Box>
   )

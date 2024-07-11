@@ -1,9 +1,11 @@
 import React from 'react'
 import { Box, Card, Typography } from '../../../components/material_ui'
+import colors from '../../../constants/colors'
+import { StyledProductsWrapper } from '../StyledComponents'
 import { featuredProducts } from './help'
 const FeaturedProductsSection = () => {
   return (
-    <Box
+    <StyledProductsWrapper
       alignItems='center'
       display='flex'
       flexDirection='column'
@@ -11,9 +13,11 @@ const FeaturedProductsSection = () => {
       justifyContent='center'
     >
       <Typography
-        fontSize={{ xs: '30px', sm: '42px', md: '48px' }}
+        fontSize={{ xs: '30px', sm: '40px' }}
         fontWeight='700'
         variant='h3'
+        color={colors.white}
+        sx={{ mb: '10px' }}
       >
         Featured Products
       </Typography>
@@ -35,7 +39,7 @@ const FeaturedProductsSection = () => {
           />
         ))}
       </Box>
-    </Box>
+    </StyledProductsWrapper>
   )
 }
 
