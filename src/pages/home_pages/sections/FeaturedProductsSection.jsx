@@ -9,7 +9,7 @@ const FeaturedProductsSection = () => {
       alignItems='center'
       display='flex'
       flexDirection='column'
-      gap='20px'
+      gap
       justifyContent='center'
     >
       <Typography
@@ -20,6 +20,21 @@ const FeaturedProductsSection = () => {
         sx={{ mb: '10px' }}
       >
         Featured Products
+      </Typography>
+      <Typography
+        align='center'
+        color={colors.white}
+        fontSize={{ xs: '16px', sm: '20px' }}
+        fontWeight='300'
+        sx={{
+          width: { xs: '70%', md: '60%' },
+          mb: '20px',
+        }}
+        variant='h3'
+      >
+        Explore our top picks from the latest collection. Each item is selected
+        for its style, quality, and sustainability, offering a glimpse of what
+        Green Threads has to offer. Discover your next favorite piece here.
       </Typography>
       <Box
         alignItems='stretch'

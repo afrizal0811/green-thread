@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography'
 import React from 'react'
 const MuiTypography = (props) => {
   const {
+    align,
     children,
     color,
     className,
@@ -15,6 +16,7 @@ const MuiTypography = (props) => {
   } = props
   return (
     <Typography
+      align={align}
       className={className}
       color={color}
       component={component}
