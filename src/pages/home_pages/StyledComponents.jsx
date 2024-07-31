@@ -40,7 +40,18 @@ export const StyledHeroButton = muiStyled(Button)`
 // =============== FEATURED PRODUCTS ==========================
 
 export const StyledProductsWrapper = muiStyled(Box)`
-background: radial-gradient(circle, rgba(34,139,34,1) 60%, rgba(24,97,24,1) 100%);
-padding: 50px 0;
-margin-top: 30px;
+  background: radial-gradient(circle, rgba(34,139,34,1) 60%, rgba(24,97,24,1) 100%);
+  padding: 50px 0;
+  margin-top: 30px;
+`
+// =============== Sustainability Commitment ==========================
+export const StyledIconWrapper = muiStyled(Box)`
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 150px;
 `

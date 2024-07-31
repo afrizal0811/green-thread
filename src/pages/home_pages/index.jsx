@@ -1,8 +1,9 @@
 import React from 'react'
 import { Box } from '../../components/material_ui'
 import AboutSection from './sections/AboutSection'
-import HeroSection from './sections/HeroSection'
 import FeaturedProductsSection from './sections/FeaturedProductsSection'
+import HeroSection from './sections/HeroSection'
+import SustainCommitSection from './sections/SustainCommitSection'
 const HomePage = () => {
   return (
     <Box
@@ -13,6 +14,7 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection />
       <FeaturedProductsSection />
+      <SustainCommitSection />
     </Box>
   )
 }

@@ -26,3 +26,31 @@ export const featuredProducts = [
     src: imagePath.featuredProducts4,
   },
 ]
+
+export const sustainCommits = [
+  {
+    id: 1,
+    title: 'Renewable Energy',
+    src: imagePath.commitRenewable,
+  },
+  {
+    id: 2,
+    title: 'Fair Trade',
+    src: imagePath.commitFair,
+  },
+  {
+    id: 3,
+    title: 'Recyling',
+    src: imagePath.commitRecyling,
+  },
+  {
+    id: 4,
+    title: 'Low-impact Dyes',
+    src: imagePath.commitLowImpact,
+  },
+  {
+    id: 5,
+    title: 'Organic Materials',
+    src: imagePath.commitOrganic,
+  },
+]
