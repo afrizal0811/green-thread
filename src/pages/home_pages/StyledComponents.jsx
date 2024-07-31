@@ -58,10 +58,10 @@ export const StyledIconWrapper = muiStyled(Box)`
 // =============== Review ==========================
 export const StyledReview = muiStyled(Box)`
   background: white;
-  padding: 20px;
-  width: 300px;
-  height: 300px;
+  border-radius: 10px;
+  height: 350px;
   margin-top: -50px;
   padding-top: 40px;
-  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
 `

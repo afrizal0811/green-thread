@@ -1,4 +1,5 @@
 import React from 'react'
+import Carousel from '../../../components/carousel/Carousel'
 import {
   Avatar,
   Box,
@@ -6,7 +7,7 @@ import {
   Typography,
 } from '../../../components/material_ui'
 import { StyledReview } from '../StyledComponents'
-import { reviewList } from './help'
+import { carouselSetting, reviewList } from './help'
 
 const ReviewSection = () => {
   return (
@@ -26,14 +27,7 @@ const ReviewSection = () => {
       >
         Customer Reviews
       </Typography>
-      <Box
-        alignItems='center'
-        display='flex'
-        flexDirection={{ xs: 'column', sm: 'row' }}
-        gap={4}
-        justifyContent='center'
-        flexWrap='wrap'
-      >
+      <Carousel settings={carouselSetting}>
         {reviewList.map((data) => (
           <Box
             alignItems='center'
@@ -77,7 +71,7 @@ const ReviewSection = () => {
             </StyledReview>
           </Box>
         ))}
-      </Box>
+      </Carousel>
     </Box>
   )
 }
