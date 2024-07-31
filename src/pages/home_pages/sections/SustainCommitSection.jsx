@@ -10,13 +10,14 @@ const SustainCommitSection = () => {
       flexDirection='column'
       gap
       justifyContent='center'
+      sx={{ height: '400px' }}
     >
       <Typography
         fontSize={{ xs: '30px', sm: '36px' }}
         fontWeight='700'
         variant='h3'
         textAlign='center'
-        sx={{ mb: '10px' }}
+        sx={{ mb: '50px' }}
       >
         Sustainability Commitments
       </Typography>
@@ -36,7 +37,7 @@ const SustainCommitSection = () => {
             gap={2}
             justifyContent='center'
           >
-            <StyledIconWrapper>
+            <StyledIconWrapper $id={data.id}>
               <Image
                 alt={data.title}
                 src={data.src}

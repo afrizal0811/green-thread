@@ -10,7 +10,7 @@ const HomePage = () => {
     <Box
       display='flex'
       flexDirection='column'
-      gap={{ xs: '80px', sm: '100px', md: '50px' }}
+      gap={{ xs: '80px', sm: '100px', md: '30px' }}
     >
       <HeroSection />
       <AboutSection />

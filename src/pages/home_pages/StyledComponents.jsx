@@ -52,8 +52,9 @@ export const StyledIconWrapper = muiStyled(Box)`
   display: flex;
   height: 150px;
   justify-content: center;
-  margin-top: 20px;
   width: 150px;
+  border: 5px solid ${(props) =>
+    props.$id % 2 === 0 ? colors.forestGreen : colors.forestGreenDark};
 `
 // =============== Review ==========================
 export const StyledReview = muiStyled(Box)`
