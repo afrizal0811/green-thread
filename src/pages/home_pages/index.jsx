@@ -3,6 +3,7 @@ import { Box } from '../../components/material_ui'
 import AboutSection from './sections/AboutSection'
 import FeaturedProductsSection from './sections/FeaturedProductsSection'
 import HeroSection from './sections/HeroSection'
+import ReviewSection from './sections/ReviewSection'
 import SustainCommitSection from './sections/SustainCommitSection'
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <AboutSection />
       <FeaturedProductsSection />
       <SustainCommitSection />
+      <ReviewSection />
     </Box>
   )
 }

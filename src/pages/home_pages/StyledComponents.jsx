@@ -55,3 +55,13 @@ export const StyledIconWrapper = muiStyled(Box)`
   margin-top: 20px;
   width: 150px;
 `
+// =============== Review ==========================
+export const StyledReview = muiStyled(Box)`
+  background: white;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  margin-top: -50px;
+  padding-top: 40px;
+  border-radius: 10px;
+`

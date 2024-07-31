@@ -18,7 +18,7 @@ const SustainCommitSection = () => {
         textAlign='center'
         sx={{ mb: '10px' }}
       >
-        Sustainability Commitment
+        Sustainability Commitments
       </Typography>
       <Box
         alignItems='center'

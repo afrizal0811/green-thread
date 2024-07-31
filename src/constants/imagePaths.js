@@ -11,6 +11,12 @@ const imagePath = {
   featuredProducts4: './images/featured-prod-4.jpg',
   heroImage: './images/hero-image.jpg',
   logo: './images/logo.png',
+  review1: './images/review-1.jpg',
+  review2: './images/review-2.jpg',
+  review3: './images/review-3.jpg',
+  review4: './images/review-4.jpg',
+  review5: './images/review-5.jpg',
+  review6: './images/review-6.jpg',
 }
 
 export default imagePath
