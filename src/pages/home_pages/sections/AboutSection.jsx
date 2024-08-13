@@ -46,6 +46,7 @@ const AboutSection = () => {
             fontSize='16px'
             fontWeight='400'
             align='justify'
+            variant='p'
           >
             Founded by a group of friends passionate about both style and
             environmental conservation, GreenThreads aims to redefine fashion by

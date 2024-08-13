@@ -1,6 +1,6 @@
 const colors = {
   black: '#000000',
-  darkTangerine: '#FBA815',
+  yellowOrange: '#fbb537',
   forestGreen: '#228B22',
   forestGreenDark: '#186118',
   maize: '#FCC158',
