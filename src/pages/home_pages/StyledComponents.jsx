@@ -1,6 +1,6 @@
 import { styled as muiStyled } from '@mui/material'
 import styled from 'styled-components'
-import { Box, Button } from '../../components/material_ui'
+import { Box, Button, Image } from '../../components/material_ui'
 import colors from '../../constants/colors'
 import muiBreakpoints from '../../utilities/muiBreakpoints'
 
@@ -31,10 +31,19 @@ export const StyledHeroButton = muiStyled(Button)`
   width: 130px;
   padding: 10px;
   padding-bottom: 5px;
-  background-color: ${colors.forestGreen};
+  color: black;
+  font-weight: 700;
+  background-color: ${colors.maize};
   &:hover {
-    background-color: ${colors.forestGreenDark};
+    background-color: ${colors.darkTangerine};
   }
+`
+// =============== ABOUT PRODUCTS ==========================
+
+export const StyledImage = muiStyled(Image)`
+  padding: 0 10px;
+  border-radius: 25px;
+  
 `
 
 // =============== FEATURED PRODUCTS ==========================
@@ -43,6 +52,20 @@ export const StyledProductsWrapper = muiStyled(Box)`
   background: radial-gradient(circle, rgba(34,139,34,1) 60%, rgba(24,97,24,1) 100%);
   padding: 50px 0;
   margin-top: 30px;
+`
+export const StyledFeaturedButton = muiStyled(Button)`
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: ${colors.maize};
+  &:hover {
+    background-color: ${colors.darkTangerine};
+  }
 `
 // =============== Sustainability Commitment ==========================
 export const StyledIconWrapper = muiStyled(Box)`
@@ -54,7 +77,7 @@ export const StyledIconWrapper = muiStyled(Box)`
   justify-content: center;
   width: 150px;
   border: 5px solid ${(props) =>
-    props.$id % 2 === 0 ? colors.forestGreen : colors.forestGreenDark};
+    props.$id % 2 === 0 ? colors.maize : colors.darkTangerine};
 `
 // =============== Review ==========================
 export const StyledReview = muiStyled(Box)`

@@ -10,7 +10,7 @@ const SustainCommitSection = () => {
       flexDirection='column'
       gap
       justifyContent='center'
-      sx={{ height: '400px' }}
+      sx={{ height: { xs: 'auto', sm: '400px' } }}
     >
       <Typography
         fontSize={{ xs: '30px', sm: '36px' }}

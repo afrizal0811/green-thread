@@ -1,7 +1,10 @@
 import React from 'react'
 import { Box, Card, Typography } from '../../../components/material_ui'
 import colors from '../../../constants/colors'
-import { StyledProductsWrapper } from '../StyledComponents'
+import {
+  StyledFeaturedButton,
+  StyledProductsWrapper,
+} from '../StyledComponents'
 import { featuredProducts } from './help'
 const FeaturedProductsSection = () => {
   return (
@@ -54,6 +57,10 @@ const FeaturedProductsSection = () => {
           />
         ))}
       </Box>
+      <StyledFeaturedButton
+        text='Shop Now'
+        variant='contained'
+      />
     </StyledProductsWrapper>
   )
 }

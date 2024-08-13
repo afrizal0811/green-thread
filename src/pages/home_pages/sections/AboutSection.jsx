@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Image, Typography } from '../../../components/material_ui'
+import { Box, ImageList, Typography } from '../../../components/material_ui'
 import colors from '../../../constants/colors'
-import imagePath from '../../../constants/imagePaths'
+import { aboutItems } from './help'
 const AboutSection = () => {
   const renderSectionTitle = (
     <Box
@@ -22,7 +22,6 @@ const AboutSection = () => {
     <Box
       alignItems='center'
       display='flex'
-      height='400px'
       justifyContent='center'
     >
       <Box
@@ -46,21 +45,23 @@ const AboutSection = () => {
           <Typography
             fontSize='16px'
             fontWeight='400'
+            align='justify'
           >
-            Green Threads aims to transform the fashion industry with
-            eco-friendly practices. We prioritize using organic and recycled
-            materials, ethical production, low-impact dyes, and innovative
-            recycling methods. Our mission is to provide stylish, high-quality
-            clothing that respects both people and the planet.
+            Founded by a group of friends passionate about both style and
+            environmental conservation, GreenThreads aims to redefine fashion by
+            placing sustainability at its core. We are committed to using
+            eco-friendly materials, ethical production practices, and low-impact
+            dyes to create high-quality clothing that respects both people and
+            the planet. Our collections offer versatile, timeless designs that
+            are as stylish as they are responsible. Join us on our journey to
+            make a positive impact, one garment at a time.
           </Typography>
         </Box>
-        <Image
-          alt='About'
-          height={{ xs: 200, sm: 340, md: 300, lg: 310 }}
-          src={imagePath.aboutImage}
-          width={{ xs: 330, sm: 550, md: 500, lg: 520 }}
-          sx={{ px: '10px' }}
-        />
+        <Box
+          sx={{ width: { xs: '70%', md: '40%' }, pt: { xs: 0, md: '50px' } }}
+        >
+          <ImageList item={aboutItems} />
+        </Box>
       </Box>
     </Box>
   )
