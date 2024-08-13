@@ -6,6 +6,7 @@ import {
   Typography,
 } from '../../../components/material_ui'
 import {
+  StyledColoredTitle,
   StyledIconContent,
   StyledIconWrapper,
   StyledImageWrapper,
@@ -47,6 +48,7 @@ const SustainCommitSection = () => {
       />
     </StyledImageWrapper>
   )
+
   return (
     <Box
       alignItems='center'
@@ -63,7 +65,7 @@ const SustainCommitSection = () => {
         textAlign='center'
         sx={{ mb: '50px' }}
       >
-        Sustainability Commitments
+        <StyledColoredTitle>Sustainability</StyledColoredTitle> Commitments
       </Typography>
       <Box
         alignItems='center'

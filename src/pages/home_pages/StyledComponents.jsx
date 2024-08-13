@@ -4,6 +4,10 @@ import { Box, Button, Image, Input } from '../../components/material_ui'
 import colors from '../../constants/colors'
 import muiBreakpoints from '../../utilities/muiBreakpoints'
 
+// =============== PUBLIC ==========================
+export const StyledColoredTitle = styled.span`
+  color: ${colors.forestGreen};
+`
 // =============== HERO ==========================
 export const StyledHeroImage = styled.div`
   border-bottom-left-radius: 50% 25%;
@@ -49,8 +53,11 @@ export const StyledImage = muiStyled(Image)`
 
 export const StyledProductsWrapper = muiStyled(Box)`
   background: radial-gradient(circle, rgba(24,97,24,1) 40%, rgba(34,139,34,1) 100%);
-  margin-top: 30px;
+  // margin-top: 30px;
   padding: 50px 0;
+    ${(props) => muiBreakpoints(props, 'md')} {
+    margin-top: 30px;
+  }
 `
 export const StyledFeaturedButton = muiStyled(Button)`
   background-color: ${colors.maize};
@@ -95,13 +102,16 @@ export const StyledIconContent = muiStyled(Box)`
     props.$id % 2 === 0 ? colors.maize : colors.yellowOrange};
 `
 // =============== Review ==========================
+export const StyledReviewrapper = muiStyled(Box)`
+  filter: drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.25));
+  margin-bottom: 30px;
+`
 export const StyledReview = muiStyled(Box)`
   background: white;
   border-radius: 10px;
   height: 350px;
   margin-top: -50px;
-  padding-top: 40px;
-  padding: 20px;
+  padding: 50px 20px 20px;
   width: 300px;
 `
 // =============== Newsletter ==========================

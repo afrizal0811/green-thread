@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, ImageList, Typography } from '../../../components/material_ui'
-import colors from '../../../constants/colors'
+import { StyledColoredTitle } from '../StyledComponents'
 import { aboutItems } from './help'
 const AboutSection = () => {
   const renderSectionTitle = (
@@ -9,12 +9,8 @@ const AboutSection = () => {
       flexDirection='row'
       gap
     >
-      <Typography
-        variant='h4'
-        fontWeight='700'
-      >
-        Welcome to{' '}
-        <span style={{ color: colors.forestGreen }}>Green Threads</span>
+      <Typography variant='h4'>
+        Welcome to <StyledColoredTitle>Green Threads</StyledColoredTitle>
       </Typography>
     </Box>
   )
@@ -46,7 +42,7 @@ const AboutSection = () => {
             fontSize='16px'
             fontWeight='400'
             align='justify'
-            variant='p'
+            variant='about'
           >
             Founded by a group of friends passionate about both style and
             environmental conservation, GreenThreads aims to redefine fashion by

@@ -14,7 +14,7 @@ const Hero = () => {
         alignItems={{ xs: 'center', md: 'start' }}
         display='flex'
         flexDirection='column'
-        gap={10}
+        gap={2}
         justifyContent='center'
       >
         <Box
@@ -41,11 +41,12 @@ const Hero = () => {
           alignItems={{ xs: 'center', md: 'start' }}
           display='flex'
           flexDirection='column'
-          gap='10px' 
+          gap
         >
           <Typography
             fontSize={{ xs: '14px', md: '16px' }}
             textAlign={{ xs: 'center', md: 'left' }}
+            variant='p'
           >
             Explore sustainable fashion at Green Threads!
             <br />

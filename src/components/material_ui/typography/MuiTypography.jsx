@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import React from 'react'
+import { themesSetting } from './help'
 const MuiTypography = (props) => {
   const {
     align,
@@ -16,22 +17,7 @@ const MuiTypography = (props) => {
     variant,
   } = props
 
-  const theme = createTheme({
-    typography: {
-      p: {
-        fontFamily: 'Josefin Sans',
-        fontWeight: 400,
-        fontSize: '18px',
-        lineHeight: '20px',
-        letterSpacing: '0.02em',
-      },
-      curly: {
-        fontFamily: 'Pacifico',
-        lineHeight: '50px',
-        letterSpacing: '0.02em',
-      },
-    },
-  })
+  const theme = createTheme(themesSetting)
   return (
     <ThemeProvider theme={theme}>
       <Typography
