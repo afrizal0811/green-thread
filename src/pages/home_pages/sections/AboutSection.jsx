@@ -60,7 +60,12 @@ const AboutSection = () => {
         <Box
           sx={{ width: { xs: '70%', md: '40%' }, pt: { xs: 0, md: '50px' } }}
         >
-          <ImageList item={aboutItems} />
+          <ImageList
+            item={aboutItems}
+            variant='masonry'
+            cols={3}
+            gap={10}
+          />
         </Box>
       </Box>
     </Box>

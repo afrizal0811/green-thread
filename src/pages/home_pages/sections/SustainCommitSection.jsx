@@ -1,8 +1,52 @@
 import React from 'react'
-import { Box, Image, Typography } from '../../../components/material_ui'
-import { StyledIconWrapper } from '../StyledComponents'
-import { sustainCommits } from './help'
+import {
+  Box,
+  Image,
+  ImageList,
+  Typography,
+} from '../../../components/material_ui'
+import {
+  StyledIconContent,
+  StyledIconWrapper,
+  StyledImageWrapper,
+} from '../StyledComponents'
+import { sustainCommitIcons, sustainCommitImages } from './help'
 const SustainCommitSection = () => {
+  const renderIcon = sustainCommitIcons.map((data) => (
+    <StyledIconWrapper
+      alignItems='center'
+      flexDirection='column'
+      gap={2}
+      justifyContent='center'
+    >
+      <StyledIconContent $id={data.id}>
+        <Image
+          alt={data.title}
+          src={data.src}
+          height='80px'
+        />
+      </StyledIconContent>
+      <Typography
+        fontSize={'18px'}
+        fontWeight='700'
+        variant='p'
+      >
+        {data.title}
+      </Typography>
+    </StyledIconWrapper>
+  ))
+  const renderImage = (
+    <StyledImageWrapper>
+      <ImageList
+        cols={1}
+        gap={10}
+        height='auto'
+        isTitle={true}
+        item={sustainCommitImages}
+        width='300px'
+      />
+    </StyledImageWrapper>
+  )
   return (
     <Box
       alignItems='center'
@@ -24,35 +68,12 @@ const SustainCommitSection = () => {
       <Box
         alignItems='center'
         display='flex'
-        flexDirection={{ xs: 'column', sm: 'row' }}
-        gap={{ xs: 2, sm: 4, lg: 10 }}
+        gap={{ sm: 4, lg: 10 }}
         justifyContent='center'
         flexWrap='wrap'
       >
-        {sustainCommits.map((data) => (
-          <Box
-            alignItems='center'
-            display='flex'
-            flexDirection='column'
-            gap={2}
-            justifyContent='center'
-          >
-            <StyledIconWrapper $id={data.id}>
-              <Image
-                alt={data.title}
-                src={data.src}
-                height='80px'
-              />
-            </StyledIconWrapper>
-            <Typography
-              fontSize={'20px'}
-              fontWeight='700'
-              variant='p'
-            >
-              {data.title}
-            </Typography>
-          </Box>
-        ))}
+        {renderIcon}
+        {renderImage}
       </Box>
     </Box>
   )

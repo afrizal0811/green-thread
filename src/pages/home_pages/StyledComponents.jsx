@@ -69,6 +69,22 @@ export const StyledFeaturedButton = muiStyled(Button)`
 `
 // =============== Sustainability Commitment ==========================
 export const StyledIconWrapper = muiStyled(Box)`
+  ${(props) => muiBreakpoints(props, 'xs')} {
+    display: none;
+  }
+    ${(props) => muiBreakpoints(props, 'sm')} {
+    display: flex;
+  }
+`
+export const StyledImageWrapper = muiStyled(Box)`
+  ${(props) => muiBreakpoints(props, 'xs')} {
+    display: flex;
+  }
+    ${(props) => muiBreakpoints(props, 'sm')} {
+    display: none;
+  }
+`
+export const StyledIconContent = muiStyled(Box)`
   align-items: center;
   background: white;
   border-radius: 50%;

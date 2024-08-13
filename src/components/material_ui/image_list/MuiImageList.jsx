@@ -1,14 +1,15 @@
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
+import ImageListItemBar from '@mui/material/ImageListItemBar'
 import React from 'react'
 
 const MuiImageList = (props) => {
-  const { item } = props
+  const { item, height, width, variant, cols, gap, isTitle } = props
   return (
     <ImageList
-      variant='masonry'
-      cols={3}
-      gap={10}
+      variant={variant}
+      cols={cols}
+      gap={gap}
     >
       {item.map((item) => (
         <ImageListItem key={item.src}>
@@ -17,7 +18,9 @@ const MuiImageList = (props) => {
             src={item.src}
             alt={item.src}
             loading='lazy'
+            style={{ height: height, width: width }}
           />
+          {isTitle && <ImageListItemBar title={item.title} />}
         </ImageListItem>
       ))}
     </ImageList>

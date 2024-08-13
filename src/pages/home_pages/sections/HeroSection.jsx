@@ -14,7 +14,7 @@ const Hero = () => {
         alignItems={{ xs: 'center', md: 'start' }}
         display='flex'
         flexDirection='column'
-        gap='10px'
+        gap={10}
         justifyContent='center'
       >
         <Box

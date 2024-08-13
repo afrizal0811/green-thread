@@ -92,31 +92,58 @@ export const featuredProducts = [
   },
 ]
 
-export const sustainCommits = [
+export const sustainCommitImages = [
   {
     id: 1,
     title: 'Renewable Energy',
-    src: imagePath.commitRenewable,
+    src: imagePath.commitRenewableImg,
   },
   {
     id: 2,
     title: 'Fair Trade',
-    src: imagePath.commitFair,
+    src: imagePath.commitFairImg,
   },
   {
     id: 3,
     title: 'Recyling',
-    src: imagePath.commitRecyling,
+    src: imagePath.commitRecylingImg,
   },
   {
     id: 4,
     title: 'Low-impact Dyes',
-    src: imagePath.commitLowImpact,
+    src: imagePath.commitLowImpactImg,
   },
   {
     id: 5,
     title: 'Organic Materials',
-    src: imagePath.commitOrganic,
+    src: imagePath.commitOrganicImg,
+  },
+]
+export const sustainCommitIcons = [
+  {
+    id: 1,
+    title: 'Renewable Energy',
+    src: imagePath.commitRenewableIcon,
+  },
+  {
+    id: 2,
+    title: 'Fair Trade',
+    src: imagePath.commitFairIcon,
+  },
+  {
+    id: 3,
+    title: 'Recyling',
+    src: imagePath.commitRecylingIcon,
+  },
+  {
+    id: 4,
+    title: 'Low-impact Dyes',
+    src: imagePath.commitLowImpactIcon,
+  },
+  {
+    id: 5,
+    title: 'Organic Materials',
+    src: imagePath.commitOrganicIcon,
   },
 ]
 
