@@ -8,9 +8,9 @@ import {
   Box,
   Container,
   Divider,
+  Menu,
   MenuItem,
   Tooltip,
-  Menu,
 } from '../material_ui'
 import {
   StyledAppBar,
@@ -21,7 +21,9 @@ import {
   StyledUserMenu,
 } from './StyledComponents'
 import { pageMenu, pages, settings, userMenu } from './help'
-const NavigationMenu = () => {
+
+const NavigationMenu = (props) => {
+  const { children } = props
   const navigate = useNavigate()
   const [anchorElNav, setAnchorElNav] = useState(null)
   const [anchorElUser, setAnchorElUser] = useState(null)
@@ -148,17 +150,20 @@ const NavigationMenu = () => {
   )
 
   return (
-    <StyledAppBar position='static'>
-      <Container maxWidth='xl'>
-        <Toolbar disableGutters>
-          {renderLogo(true)}
-          {renderPagesTray}
-          {renderLogo(false)}
-          {renderPageMenu}
-          {renderUserMenu}
-        </Toolbar>
-      </Container>
-    </StyledAppBar>
+    <Box>
+      <StyledAppBar position='static'>
+        <Container maxWidth='xl'>
+          <Toolbar disableGutters>
+            {renderLogo(true)}
+            {renderPagesTray}
+            {renderLogo(false)}
+            {renderPageMenu}
+            {renderUserMenu}
+          </Toolbar>
+        </Container>
+      </StyledAppBar>
+      {children}
+    </Box>
   )
 }
 
