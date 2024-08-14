@@ -1,4 +1,3 @@
-export const pages = ['Home', 'Shop', 'Cart', 'About', 'Contact']
 export const settings = ['Profile', 'Dashboard', 'Logout']
 export const userMenu = {
   anchorOrigin: {

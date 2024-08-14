@@ -10,6 +10,11 @@ export const themesSetting = {
       fontWeight: 700,
       fontSize: '36px',
     },
+    h5: {
+      fontFamily: 'Josefin Sans',
+      fontWeight: 700,
+      fontSize: '30px',
+    },
     p: {
       fontFamily: 'Josefin Sans',
       fontWeight: 400,

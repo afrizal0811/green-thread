@@ -4,6 +4,9 @@ import Toolbar from '@mui/material/Toolbar'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import imagePath from '../../constants/imagePaths'
+import pagesLink from '../../constants/pagesLink'
+import pageConvertor from '../../utilities/pageConvertor'
+
 import {
   Box,
   Container,
@@ -20,7 +23,7 @@ import {
   StyledLogoText,
   StyledUserMenu,
 } from './StyledComponents'
-import { pageMenu, pages, settings, userMenu } from './help'
+import { pageMenu, settings, userMenu } from './help'
 
 const NavigationMenu = (props) => {
   const { children } = props
@@ -44,9 +47,9 @@ const NavigationMenu = (props) => {
   }
 
   const handlePageChange = (page) => {
-    const newPage = page === 'Home' ? '' : page
-    navigate(`/${newPage}`)
+    navigate(`/${pageConvertor(page)}`)
   }
+
   const renderLogo = (isXs) => (
     <Box
       display={isXs ? 'none' : 'flex'}
@@ -68,7 +71,7 @@ const NavigationMenu = (props) => {
     </Box>
   )
 
-  const mappedPages = pages.map((page) => (
+  const mappedPages = pagesLink.map((page) => (
     <MenuItem
       key={page}
       onClick={() => handlePageChange(page)}
