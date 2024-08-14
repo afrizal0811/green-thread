@@ -1,7 +1,9 @@
-import React from 'react'
 import Divider from '@mui/material/Divider'
-const MuiDivider = () => {
-  return <Divider />
+import React from 'react'
+
+const MuiDivider = (props) => {
+  const { sx } = props
+  return <Divider sx={sx} />
 }
 
 export default MuiDivider

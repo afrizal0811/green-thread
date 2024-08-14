@@ -1,6 +1,6 @@
-import Divider from '@mui/material/Divider'
 import React from 'react'
 import { Outlet, useNavigate, useLocation } from 'react-router-dom'
+import { Divider } from './components/material_ui'
 import Footer from './components/footer/Footer'
 import NavigationMenu from './components/navigation_menu/NavigationMenu'
 const Layout = () => {
