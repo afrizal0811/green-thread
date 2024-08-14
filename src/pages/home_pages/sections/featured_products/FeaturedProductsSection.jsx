@@ -1,11 +1,9 @@
 import React from 'react'
 import { Box, Card, Typography } from '../../../../components/material_ui'
 import colors from '../../../../constants/colors'
-import {
-  StyledFeaturedButton,
-  StyledProductsWrapper,
-} from '../../StyledComponents'
+import { StyledFeaturedButton, StyledProductsWrapper } from './StyledComponents'
 import { productsList } from './help'
+
 const FeaturedProductsSection = () => {
   return (
     <StyledProductsWrapper

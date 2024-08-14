@@ -6,11 +6,8 @@ import {
   Rating,
   Typography,
 } from '../../../../components/material_ui'
-import {
-  StyledColoredTitle,
-  StyledReview,
-  StyledReviewrapper,
-} from '../../StyledComponents'
+import { StyledTitle } from '../../StyledComponents'
+import { StyledReview, StyledReviewrapper } from './StyledComponents'
 import { carouselSetting, reviewsList } from './help'
 
 const ReviewSection = () => {
@@ -29,7 +26,7 @@ const ReviewSection = () => {
         textAlign='center'
         sx={{ mb: '20px' }}
       >
-        What <StyledColoredTitle>Clients</StyledColoredTitle> Say!
+        What <StyledTitle>Clients</StyledTitle> Say!
       </Typography>
       <Carousel settings={carouselSetting}>
         {reviewsList.map((data) => (

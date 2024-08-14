@@ -5,7 +5,8 @@ import {
   StyledHeroButton,
   StyledHeroImage,
   StyledHeroWrapper,
-} from '../../StyledComponents'
+} from './StyledComponents'
+
 const Hero = () => {
   return (
     <Box>

@@ -5,7 +5,8 @@ import {
   StyledNewsletterWrapper,
   StyledSubsButton,
   StyledSubsInput,
-} from '../../StyledComponents'
+} from './StyledComponents'
+
 const NewsletterSection = () => {
   return (
     <StyledNewsletterWrapper
@@ -51,7 +52,7 @@ const NewsletterSection = () => {
         <Box
           display='flex'
           flexDirection='column'
-          gap
+          gap={2}
           alignItems='center'
           justifyContent='center'
         >

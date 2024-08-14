@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, ImageList, Typography } from '../../../../components/material_ui'
-import { StyledColoredTitle } from '../../StyledComponents'
+import { StyledTitle } from '../../StyledComponents'
 import { imagesList } from './help'
+
 const AboutSection = () => {
   const renderSectionTitle = (
     <Box
@@ -10,7 +11,7 @@ const AboutSection = () => {
       gap
     >
       <Typography variant='h4'>
-        Welcome to <StyledColoredTitle>Green Threads</StyledColoredTitle>
+        Welcome to <StyledTitle>Green Threads</StyledTitle>
       </Typography>
     </Box>
   )

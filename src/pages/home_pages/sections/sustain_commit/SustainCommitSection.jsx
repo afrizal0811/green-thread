@@ -5,13 +5,14 @@ import {
   ImageList,
   Typography,
 } from '../../../../components/material_ui'
+import { StyledTitle } from '../../StyledComponents'
 import {
-  StyledColoredTitle,
   StyledIconContent,
   StyledIconWrapper,
   StyledImageWrapper,
-} from '../../StyledComponents'
+} from './StyledComponents'
 import { sustainCommitIcons, sustainCommitImages } from './help'
+
 const SustainCommitSection = () => {
   const renderIcon = sustainCommitIcons.map((data) => (
     <StyledIconWrapper
@@ -65,7 +66,7 @@ const SustainCommitSection = () => {
         textAlign='center'
         sx={{ mb: '50px' }}
       >
-        <StyledColoredTitle>Sustainability</StyledColoredTitle> Commitments
+        <StyledTitle>Sustainability</StyledTitle> Commitments
       </Typography>
       <Box
         alignItems='center'
