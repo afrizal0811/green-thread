@@ -11,6 +11,7 @@ const MuiImage = (props) => {
       src={src}
       sx={sx}
       width={width}
+      loading='lazy'
     />
   )
 }

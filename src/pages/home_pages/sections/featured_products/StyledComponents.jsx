@@ -1,7 +1,8 @@
 import { styled as muiStyled } from '@mui/material'
 import { Box } from '../../../../components/material_ui'
 import muiBreakpoints from '../../../../utilities/muiBreakpoints'
-import { StyledButton } from '../../StyledComponents'
+import { StyledButton } from '../../../../StyledComponents'
+
 export const StyledProductsWrapper = muiStyled(Box)`
   background: radial-gradient(circle, rgba(24,97,24,1) 40%, rgba(34,139,34,1) 100%);
   // margin-top: 30px;

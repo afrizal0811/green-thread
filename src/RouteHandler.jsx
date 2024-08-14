@@ -1,10 +1,11 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
-import AboutPage from './pages/AboutPage'
-import CartPage from './pages/CartPage'
-import ContactPage from './pages/ContactPage'
-import ShopPage from './pages/ShopPage'
+import AboutPage from './pages/about_pages/AboutPage'
+import CartPage from './pages/cart_pages/CartPage'
+import ContactPage from './pages/contact_pages/ContactPage'
+import NotFoundPage from './pages/not_found_pages/NotFoundPage'
+import ShopPage from './pages/shop_pages/ShopPage'
 import HomePage from './pages/home_pages'
 const RouteHandler = () => {
   return (
@@ -29,6 +30,10 @@ const RouteHandler = () => {
         <Route
           element={<ShopPage />}
           path='/shop'
+        />
+        <Route
+          element={<NotFoundPage />}
+          path='404'
         />
         <Route
           element={

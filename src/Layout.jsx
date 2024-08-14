@@ -1,33 +1,27 @@
 import React from 'react'
-import { Outlet, useNavigate, useLocation } from 'react-router-dom'
-import { Divider } from './components/material_ui'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { StyledBox, StyledDivider } from './StyledComponents'
 import Footer from './components/footer/Footer'
 import NavigationMenu from './components/navigation_menu/NavigationMenu'
 const Layout = () => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
-  const styles = {
-    dividerWrapper: {
-      marginTop: '50px',
-      display: 'flex',
-      justifyContent: 'center',
-    },
-    divider: {
-      borderBottomWidth: '1px',
-      borderColor: 'black',
-      width: '80%',
-    },
+  const context = {
+    navigate,
+    pathname,
   }
-
   return (
     <NavigationMenu
       navigate={navigate}
       pathname={pathname}
     >
-      <Outlet />
-      <div style={styles.dividerWrapper}>
-        <Divider sx={styles.divider} />
-      </div>
+      <Outlet context={context} />
+      <StyledBox
+        display='flex'
+        justifyContent='center'
+      >
+        <StyledDivider />
+      </StyledBox>
       <Footer />
     </NavigationMenu>
   )

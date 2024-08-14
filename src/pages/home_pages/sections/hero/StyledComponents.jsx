@@ -2,7 +2,7 @@ import { styled as muiStyled } from '@mui/material'
 import styled from 'styled-components'
 import { Box } from '../../../../components/material_ui'
 import muiBreakpoints from '../../../../utilities/muiBreakpoints'
-import { StyledButton } from '../../StyledComponents'
+import { StyledButton } from '../../../../StyledComponents'
 
 export const StyledHeroImage = styled.div`
   border-bottom-left-radius: 50% 25%;

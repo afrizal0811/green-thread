@@ -34,5 +34,12 @@ export const themesSetting = {
       lineHeight: '36px',
       letterSpacing: '0.02em',
     },
+    giant: {
+      fontFamily: 'Josefin Sans',
+      fontWeight: 700,
+      fontSize: '300px',
+      lineHeight: '230px',
+      letterSpacing: '0.1em',
+    },
   },
 }

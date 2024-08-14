@@ -1,7 +1,7 @@
 import { styled as muiStyled } from '@mui/material'
 import { Box, Input } from '../../../../components/material_ui'
 import muiBreakpoints from '../../../../utilities/muiBreakpoints'
-import { StyledButton } from '../../StyledComponents'
+import { StyledButton } from '../../../../StyledComponents'
 
 export const StyledNewsletterWrapper = muiStyled(Box)`
   margin: 20px 0;
