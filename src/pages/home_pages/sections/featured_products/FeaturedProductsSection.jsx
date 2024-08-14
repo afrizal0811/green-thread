@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Card, Typography } from '../../../components/material_ui'
-import colors from '../../../constants/colors'
+import { Box, Card, Typography } from '../../../../components/material_ui'
+import colors from '../../../../constants/colors'
 import {
   StyledFeaturedButton,
   StyledProductsWrapper,
-} from '../StyledComponents'
-import { featuredProducts } from './help'
+} from '../../StyledComponents'
+import { productsList } from './help'
 const FeaturedProductsSection = () => {
   return (
     <StyledProductsWrapper
@@ -46,7 +46,7 @@ const FeaturedProductsSection = () => {
         gap='20px'
         justifyContent='center'
       >
-        {featuredProducts.map((product) => (
+        {productsList.map((product) => (
           <Card
             alt={product.title}
             src={product.src}

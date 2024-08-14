@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Typography } from '../../../components/material_ui'
+import { Box, Typography } from '../../../../components/material_ui'
 import {
   StyledNewsletterContent,
   StyledNewsletterWrapper,
   StyledSubsButton,
   StyledSubsInput,
-} from '../StyledComponents'
+} from '../../StyledComponents'
 const NewsletterSection = () => {
   return (
     <StyledNewsletterWrapper

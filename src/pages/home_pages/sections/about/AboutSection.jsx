@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, ImageList, Typography } from '../../../components/material_ui'
-import { StyledColoredTitle } from '../StyledComponents'
-import { aboutItems } from './help'
+import { Box, ImageList, Typography } from '../../../../components/material_ui'
+import { StyledColoredTitle } from '../../StyledComponents'
+import { imagesList } from './help'
 const AboutSection = () => {
   const renderSectionTitle = (
     <Box
@@ -58,7 +58,7 @@ const AboutSection = () => {
           sx={{ width: { xs: '70%', md: '40%' }, pt: { xs: 0, md: '50px' } }}
         >
           <ImageList
-            item={aboutItems}
+            item={imagesList}
             variant='masonry'
             cols={3}
             gap={10}

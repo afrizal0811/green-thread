@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Typography } from '../../../components/material_ui'
-import imagePath from '../../../constants/imagePaths'
+import { Box, Typography } from '../../../../components/material_ui'
+import imagePath from '../../../../constants/imagePaths'
 import {
   StyledHeroButton,
   StyledHeroImage,
   StyledHeroWrapper,
-} from '../StyledComponents'
+} from '../../StyledComponents'
 const Hero = () => {
   return (
     <Box>

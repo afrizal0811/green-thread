@@ -1,17 +1,17 @@
 import React from 'react'
-import Carousel from '../../../components/carousel/Carousel'
+import Carousel from '../../../../components/carousel/Carousel'
 import {
   Avatar,
   Box,
   Rating,
   Typography,
-} from '../../../components/material_ui'
+} from '../../../../components/material_ui'
 import {
   StyledColoredTitle,
   StyledReview,
   StyledReviewrapper,
-} from '../StyledComponents'
-import { carouselSetting, reviewList } from './help'
+} from '../../StyledComponents'
+import { carouselSetting, reviewsList } from './help'
 
 const ReviewSection = () => {
   return (
@@ -32,7 +32,7 @@ const ReviewSection = () => {
         What <StyledColoredTitle>Clients</StyledColoredTitle> Say!
       </Typography>
       <Carousel settings={carouselSetting}>
-        {reviewList.map((data) => (
+        {reviewsList.map((data) => (
           <StyledReviewrapper
             alignItems='center'
             display='flex'

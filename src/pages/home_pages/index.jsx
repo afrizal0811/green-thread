@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box } from '../../components/material_ui'
-import AboutSection from './sections/AboutSection'
-import FeaturedProductsSection from './sections/FeaturedProductsSection'
-import HeroSection from './sections/HeroSection'
-import NewsletterSection from './sections/NewsletterSection'
-import ReviewSection from './sections/ReviewSection'
-import SustainCommitSection from './sections/SustainCommitSection'
+import AboutSection from './sections/about/AboutSection'
+import FeaturedProductsSection from './sections/featured_products/FeaturedProductsSection'
+import HeroSection from './sections/hero/HeroSection'
+import NewsletterSection from './sections/newsletter/NewsletterSection'
+import ReviewSection from './sections/review/ReviewSection'
+import SustainCommitSection from './sections/sustain_commit/SustainCommitSection'
 const HomePage = () => {
   return (
     <Box

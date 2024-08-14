@@ -4,13 +4,13 @@ import {
   Image,
   ImageList,
   Typography,
-} from '../../../components/material_ui'
+} from '../../../../components/material_ui'
 import {
   StyledColoredTitle,
   StyledIconContent,
   StyledIconWrapper,
   StyledImageWrapper,
-} from '../StyledComponents'
+} from '../../StyledComponents'
 import { sustainCommitIcons, sustainCommitImages } from './help'
 const SustainCommitSection = () => {
   const renderIcon = sustainCommitIcons.map((data) => (
