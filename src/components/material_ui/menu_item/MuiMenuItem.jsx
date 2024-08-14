@@ -1,16 +1,22 @@
-import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
 import React from 'react'
-
+import { StyledMenuItem } from './StyledComponents'
 const MuiMenuItem = (props) => {
-  const { text, key, onClick, textAlign } = props
+  const { text, key, onClick, textAlign, selected, isHome } = props
   return (
-    <MenuItem
+    <StyledMenuItem
+      $isHome={isHome}
       key={key}
       onClick={onClick}
+      selected={selected}
     >
-      <Typography textAlign={textAlign}>{text}</Typography>
-    </MenuItem>
+      <Typography
+        variant='p'
+        textAlign={textAlign}
+      >
+        {text}
+      </Typography>
+    </StyledMenuItem>
   )
 }
 

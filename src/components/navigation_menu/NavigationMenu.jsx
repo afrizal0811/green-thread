@@ -2,7 +2,6 @@ import MenuIcon from '@mui/icons-material/Menu'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import imagePath from '../../constants/imagePaths'
 import pagesLink from '../../constants/pagesLink'
 import pageConvertor from '../../utilities/pageConvertor'
@@ -25,10 +24,10 @@ import {
 import { pageMenu, settings, userMenu } from './help'
 
 const NavigationMenu = (props) => {
-  const { children } = props
-  const navigate = useNavigate()
+  const { children, navigate, pathname } = props
   const [anchorElNav, setAnchorElNav] = useState(null)
   const [anchorElUser, setAnchorElUser] = useState(null)
+  const isHome = pathname === '/'
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -76,8 +75,10 @@ const NavigationMenu = (props) => {
 
   const mappedPages = pagesLink.map((page) => (
     <MenuItem
+      isHome={isHome}
       key={page}
       onClick={() => handlePageChange(page)}
+      selected={pathname === `/${pageConvertor(page)}`}
       text={page}
       textAlign='center'
     />
@@ -157,12 +158,12 @@ const NavigationMenu = (props) => {
 
   return (
     <Box>
-      <StyledAppBar position='static'>
+      <StyledAppBar $isHome={isHome}>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             {renderLogo(true)}
-            {renderPagesTray}
             {renderLogo(false)}
+            {renderPagesTray}
             {renderPageMenu}
             {renderUserMenu}
           </Toolbar>

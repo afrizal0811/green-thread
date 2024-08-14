@@ -6,8 +6,15 @@ import { Avatar, Menu } from '../material_ui'
 export const StyledAppBar = muiStyled(AppBar)`
   background: transparent;
   box-shadow: none;
+  color: white;
   position: absolute;
   z-index: 100;
+  ${(props) =>
+    !props.$isHome &&
+    `
+    color: black;
+    position: static;
+  `}
 `
 export const StyledUserMenu = muiStyled(Menu)`
   margin-top: 45px;
