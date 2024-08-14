@@ -6,21 +6,20 @@ import { useNavigate } from 'react-router-dom'
 import imagePath from '../../constants/imagePaths'
 import pagesLink from '../../constants/pagesLink'
 import pageConvertor from '../../utilities/pageConvertor'
-
 import {
   Box,
   Container,
   Divider,
+  Image,
   Menu,
   MenuItem,
   Tooltip,
+  Typography,
 } from '../material_ui'
 import {
   StyledAppBar,
   StyledAvatar,
   StyledAvatarIcon,
-  StyledLogo,
-  StyledLogoText,
   StyledUserMenu,
 } from './StyledComponents'
 import { pageMenu, settings, userMenu } from './help'
@@ -55,19 +54,23 @@ const NavigationMenu = (props) => {
       display={isXs ? 'none' : 'flex'}
       alignItems='center'
       flexGrow={!isXs && 1}
+      gap
     >
-      <StyledLogo
+      <Image
         src={imagePath.logo}
         alt='logo'
-        width={50}
-        height={50}
+        width={{ xs: 40, sm: 45 }}
+        height={{ xs: 40, sm: 45 }}
       />
-      <StyledLogoText
+      <Typography
         variant='h5'
-        component='p'
+        sx={{
+          pt: '10px',
+        }}
+        fontSize={{ xs: '26px', sm: '32px' }}
       >
         Green Threads
-      </StyledLogoText>
+      </Typography>
     </Box>
   )
 
