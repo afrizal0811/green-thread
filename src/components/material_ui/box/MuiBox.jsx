@@ -13,6 +13,7 @@ const MuiBox = (props) => {
     gap,
     height,
     justifyContent,
+    onClick,
     src,
     sx,
     width,
@@ -29,6 +30,7 @@ const MuiBox = (props) => {
       gap={gap}
       height={height}
       justifyContent={justifyContent}
+      onClick={onClick}
       src={src}
       sx={sx}
       width={width}

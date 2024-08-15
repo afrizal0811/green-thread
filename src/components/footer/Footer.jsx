@@ -1,36 +1,13 @@
 import React from 'react'
-import imagePath from '../../constants/imagePaths'
 import pagesLink from '../../constants/pagesLink'
-import pageConvertor from '../../utilities/pageConvertor'
-import { Box, Image, Typography } from '../material_ui'
+import BrandLogo from '../brand_logo/BrandLogo'
+import { Box, Typography } from '../material_ui'
 import { StyledFooter, StyledIcon, StyledLink } from './StyledComponents'
 import { socialMedias } from './help'
 
-const Footer = () => {
-  const renderLogoTitle = (
-    <Box
-      display='flex'
-      alignItems='center'
-      justifyContent='center'
-      gap
-    >
-      <Image
-        src={imagePath.logo}
-        alt='logo'
-        width={50}
-        height={50}
-      />
-      <Typography
-        variant='h3'
-        sx={{
-          pt: '10px',
-        }}
-        fontSize={{ xs: '32px', sm: '40px' }}
-      >
-        Green Threads
-      </Typography>
-    </Box>
-  )
+const Footer = (props) => {
+  const { context } = props
+  const { navigate } = context
 
   const renderSocialMedias = (
     <Box
@@ -68,7 +45,7 @@ const Footer = () => {
       {pagesLink.map((data) => (
         <StyledLink
           key={data}
-          to={`/${pageConvertor(data)}`}
+          to={`/${data}`}
         >
           <Typography variant='p'>{data}</Typography>
         </StyledLink>
@@ -82,7 +59,14 @@ const Footer = () => {
       flexDirection='column'
       gap={3}
     >
-      {renderLogoTitle}
+      <BrandLogo
+        display='flex'
+        fontSize={{ xs: '32px', sm: '40px' }}
+        imageHeight={50}
+        imageWidth={50}
+        justifyContent='center'
+        navigate={navigate}
+      />
       {renderSocialMedias}
       {renderLinks}
     </StyledFooter>

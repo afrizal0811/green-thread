@@ -2,18 +2,15 @@ import MenuIcon from '@mui/icons-material/Menu'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import React, { useState } from 'react'
-import imagePath from '../../constants/imagePaths'
 import pagesLink from '../../constants/pagesLink'
-import pageConvertor from '../../utilities/pageConvertor'
+import BrandLogo from '../brand_logo/BrandLogo'
 import {
   Box,
   Container,
   Divider,
-  Image,
   Menu,
   MenuItem,
   Tooltip,
-  Typography,
 } from '../material_ui'
 import {
   StyledAppBar,
@@ -24,7 +21,8 @@ import {
 import { pageMenu, settings, userMenu } from './help'
 
 const NavigationMenu = (props) => {
-  const { children, navigate, pathname } = props
+  const { children, context } = props
+  const { navigate, pathname } = context
   const [anchorElNav, setAnchorElNav] = useState(null)
   const [anchorElUser, setAnchorElUser] = useState(null)
   const isHome = pathname === '/'
@@ -45,32 +43,18 @@ const NavigationMenu = (props) => {
   }
 
   const handlePageChange = (page) => {
-    navigate(`/${pageConvertor(page)}`)
+    navigate(`/${page}`)
   }
 
-  const renderLogo = (isXs) => (
-    <Box
+  const renderBrandLogo = (isXs) => (
+    <BrandLogo
       display={isXs ? 'none' : 'flex'}
-      alignItems='center'
-      flexGrow={!isXs && 1}
-      gap
-    >
-      <Image
-        src={imagePath.logo}
-        alt='logo'
-        width={{ xs: 40, sm: 45 }}
-        height={{ xs: 40, sm: 45 }}
-      />
-      <Typography
-        variant='h5'
-        sx={{
-          pt: '10px',
-        }}
-        fontSize={{ xs: '26px', sm: '32px' }}
-      >
-        Green Threads
-      </Typography>
-    </Box>
+      flexGrow={!isXs ? 1 : 0}
+      fontSize={{ xs: '26px', sm: '32px' }}
+      imageHeight={{ xs: 40, sm: 50 }}
+      imageWidth={{ xs: 40, sm: 50 }}
+      navigate={navigate}
+    />
   )
 
   const mappedPages = pagesLink.map((page) => (
@@ -78,7 +62,7 @@ const NavigationMenu = (props) => {
       isHome={isHome}
       key={page}
       onClick={() => handlePageChange(page)}
-      selected={pathname === `/${pageConvertor(page)}`}
+      selected={pathname === `/${page}`}
       text={page}
       textAlign='center'
     />
@@ -94,10 +78,7 @@ const NavigationMenu = (props) => {
   ))
 
   const renderPagesTray = (
-    <Box
-      flexGrow={{ xs: 1, md: 0 }}
-      display={{ xs: 'flex', md: 'none' }}
-    >
+    <Box display={{ xs: 'flex', md: 'none' }}>
       <IconButton
         size='large'
         onClick={handleOpenNavMenu}
@@ -161,8 +142,8 @@ const NavigationMenu = (props) => {
       <StyledAppBar $isHome={isHome}>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
-            {renderLogo(true)}
-            {renderLogo(false)}
+            {renderBrandLogo(true)}
+            {renderBrandLogo(false)}
             {renderPagesTray}
             {renderPageMenu}
             {renderUserMenu}

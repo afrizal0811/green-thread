@@ -10,11 +10,9 @@ const Layout = () => {
     navigate,
     pathname,
   }
+
   return (
-    <NavigationMenu
-      navigate={navigate}
-      pathname={pathname}
-    >
+    <NavigationMenu context={context}>
       <Outlet context={context} />
       <StyledBox
         display='flex'
@@ -22,7 +20,7 @@ const Layout = () => {
       >
         <StyledDivider />
       </StyledBox>
-      <Footer />
+      <Footer context={context} />
     </NavigationMenu>
   )
 }
