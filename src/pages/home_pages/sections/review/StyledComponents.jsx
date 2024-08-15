@@ -2,7 +2,7 @@ import { styled as muiStyled } from '@mui/material'
 import { Box } from '../../../../components/material_ui'
 
 export const StyledReviewrapper = muiStyled(Box)`
-  filter: drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
   margin-bottom: 30px;
 `
 export const StyledReview = muiStyled(Box)`

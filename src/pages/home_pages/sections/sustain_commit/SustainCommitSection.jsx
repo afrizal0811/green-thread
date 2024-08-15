@@ -28,7 +28,7 @@ const SustainCommitSection = () => {
             width='100%'
           >
             <StyledImage
-              $id={data.id}
+              $isEven={isEven}
               src={data.src}
             />
             <Box
@@ -47,7 +47,8 @@ const SustainCommitSection = () => {
               </Typography>
             </Box>
           </Box>
-        )})}
+        )
+      })}
     </StyledImageWrapper>
   )
 
