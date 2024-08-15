@@ -3,9 +3,9 @@ import React from 'react'
 const MuiBox = (props) => {
   const {
     alignItems,
-    component,
     children,
     className,
+    component,
     display,
     flexDirection,
     flexGrow,
@@ -13,6 +13,7 @@ const MuiBox = (props) => {
     gap,
     height,
     justifyContent,
+    key,
     onClick,
     src,
     sx,
@@ -30,6 +31,7 @@ const MuiBox = (props) => {
       gap={gap}
       height={height}
       justifyContent={justifyContent}
+      key={key}
       onClick={onClick}
       src={src}
       sx={sx}
