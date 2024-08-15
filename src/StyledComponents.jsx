@@ -1,5 +1,5 @@
 import { styled as muiStyled } from '@mui/material'
-import { Box, Divider, Button } from './components/material_ui'
+import { Box, Button, Divider, Input } from './components/material_ui'
 import colors from './constants/colors'
 
 export const StyledBox = muiStyled(Box)`
@@ -17,7 +17,32 @@ export const StyledButton = muiStyled(Button)`
   color: black;
   font-weight: 700;
   padding: 10px;
+  transition-duration: 0.2s;
   &:hover {
     background-color: ${colors.yellowOrange};
+  }
+`
+
+export const StyledInput = muiStyled(Input)`
+  .MuiInputBase-root, .MuiInputLabel-root, input {
+    color: black;
+  }
+
+  .MuiInputBase-root, input {
+    border-radius: 25px;
+    &:before {
+      border-bottom-color: transparent !important;
+    }
+    &:after {
+      border-bottom-color: transparent !important;
+    }
+  }
+
+  input {
+    background: rgba(255,255,255,0.5);
+    &:focus {
+      background: rgba(255,255,255,0.7);
+      border: none;
+    }
   }
 `
