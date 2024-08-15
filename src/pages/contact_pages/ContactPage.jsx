@@ -76,6 +76,7 @@ const ContactPage = () => {
       width='100%'
       height={{ xs: 'auto', md: '100dvh' }}
       gap={{ xs: 5, md: 0 }}
+      sx={{ mt: { xs: 0, md: '20px' } }}
     >
       {renderContactForm}
       <Divider
