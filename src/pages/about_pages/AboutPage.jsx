@@ -123,7 +123,7 @@ const AboutPage = () => {
       display='flex'
       flexDirection='column'
       gap={5}
-      sx={{ mt: '30px' }}
+      sx={{ mt: '50px' }}
       width='100%'
     >
       {renderStory}

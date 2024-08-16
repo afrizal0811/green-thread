@@ -33,7 +33,7 @@ const AboutSection = () => {
           display='flex'
           flexDirection='column'
           flexWrap='wrap'
-          gap='10px'
+          gap={2}
           justifyContent='center'
           width={{ xs: 330, sm: 570, md: 600 }}
           sx={{ px: '20px' }}

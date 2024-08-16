@@ -39,7 +39,7 @@ const FeaturedProductsSection = () => {
         alignItems='stretch'
         display='flex'
         flexWrap='wrap'
-        gap='20px'
+        gap={2}
         justifyContent='center'
       >
         {productsList.map((product) => (
