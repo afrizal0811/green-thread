@@ -1,6 +1,11 @@
 export const themesSetting = {
   typography: {
     fontFamily: 'Josefin Sans',
+    h2: {
+      fontWeight: 700,
+      fontSize: '56px',
+      letterSpacing: '0.03em',
+    },
     h3: {
       fontWeight: 700,
       fontSize: '40px',
