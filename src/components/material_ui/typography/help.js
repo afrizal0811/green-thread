@@ -18,6 +18,7 @@ export const themesSetting = {
       fontWeight: 700,
       fontSize: '30px',
     },
+    h6: { fontWeight: 700, fontSize: '24px' },
     p: {
       fontWeight: 400,
       fontSize: '18px',

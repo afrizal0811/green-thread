@@ -14,24 +14,22 @@ const FeaturedProductsSection = () => {
       justifyContent='center'
     >
       <Typography
-        fontSize={{ xs: '30px', sm: '40px' }}
-        fontWeight='700'
-        variant='h3'
         color={colors.white}
+        fontSize={{ xs: '30px', sm: '40px' }}
         sx={{ mb: '10px' }}
+        variant='h3'
       >
         Featured Products
       </Typography>
       <Typography
         align='center'
         color={colors.white}
-        fontSize={{ xs: '16px', sm: '20px' }}
-        fontWeight='300'
+        fontSize={{ xs: '16px' }}
         sx={{
           width: { xs: '70%', md: '60%' },
           mb: '20px',
         }}
-        variant='h3'
+        variant='p'
       >
         Explore our top picks from the latest collection. Each item is selected
         for its style, quality, and sustainability, offering a glimpse of what
@@ -47,11 +45,11 @@ const FeaturedProductsSection = () => {
         {productsList.map((product) => (
           <Card
             alt={product.title}
-            src={product.src}
             height='200'
-            title={product.title}
+            src={product.src}
             text={product.text}
-            sx={{ maxWidth: '300px' }}
+            title={product.title}
+            sx={{ maxWidth: { xs: '300px', md: '400px', lg: '300px' } }}
           />
         ))}
       </Box>
