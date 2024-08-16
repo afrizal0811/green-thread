@@ -1,5 +1,13 @@
 import imagePath from '../../../../constants/imagePaths'
 
+export const aboutText = `Founded by a group of friends passionate about both style and
+            environmental conservation, Green Threads aims to redefine fashion
+            by placing sustainability at its core. We are committed to using
+            eco-friendly materials, ethical production practices, and low-impact
+            dyes to create high-quality clothing that respects both people and
+            the planet. Our collections offer versatile, timeless designs that
+            are as stylish as they are responsible. Join us on our journey to
+            make a positive impact, one garment at a time.`
 export const imagesList = [
   {
     id: 1,

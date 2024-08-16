@@ -56,7 +56,7 @@ const SustainCommitSection = () => {
     <StyledImageListWrapper>
       <ImageList
         cols={1}
-        gap={10}
+        gap={20}
         height='auto'
         isTitle={true}
         item={sustainCommitImages}

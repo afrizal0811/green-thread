@@ -74,7 +74,7 @@ const ContactPage = () => {
       flexDirection={{ xs: 'column', md: 'row' }}
       justifyContent='space-around'
       width='100%'
-      height={{ xs: 'auto', md: '100dvh' }}
+      height={{ xs: 'auto', md: '70dvh', lg: '100%' }}
       gap={{ xs: 5, md: 0 }}
       sx={{ mt: { xs: 0, md: '20px' } }}
     >

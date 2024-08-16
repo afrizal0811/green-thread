@@ -2,7 +2,13 @@ import React from 'react'
 import pagesLink from '../../constants/pagesLink'
 import BrandLogo from '../brand_logo/BrandLogo'
 import { Box, Typography } from '../material_ui'
-import { StyledFooter, StyledIcon, StyledLink } from './StyledComponents'
+import {
+  StyledFooter,
+  StyledIcon,
+  StyledLink,
+  StyledDivider,
+  StyledBox,
+} from './StyledComponents'
 import { socialMedias } from './help'
 
 const Footer = (props) => {
@@ -54,22 +60,30 @@ const Footer = (props) => {
   )
 
   return (
-    <StyledFooter
-      display='flex'
-      flexDirection='column'
-      gap={3}
-    >
-      <BrandLogo
+    <Box>
+      <StyledBox
         display='flex'
-        fontSize={{ xs: '32px', sm: '40px' }}
-        imageHeight={50}
-        imageWidth={50}
         justifyContent='center'
-        navigate={navigate}
-      />
-      {renderSocialMedias}
-      {renderLinks}
-    </StyledFooter>
+      >
+        <StyledDivider />
+      </StyledBox>
+      <StyledFooter
+        display='flex'
+        flexDirection='column'
+        gap={3}
+      >
+        <BrandLogo
+          display='flex'
+          fontSize={{ xs: '32px', sm: '40px' }}
+          imageHeight={50}
+          imageWidth={50}
+          justifyContent='center'
+          navigate={navigate}
+        />
+        {renderSocialMedias}
+        {renderLinks}
+      </StyledFooter>
+    </Box>
   )
 }
 

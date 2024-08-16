@@ -8,8 +8,8 @@ export const StyledPortrait = muiStyled(Image)`
   height: 350px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   ${(props) => muiBreakpoints(props, 'md')} {
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
   }
 
   ${(props) => muiBreakpoints(props, 'lg')} {

@@ -1,8 +1,16 @@
 import { styled as muiStyled } from '@mui/material'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Box } from '../material_ui'
+import { Box, Divider } from '../material_ui'
 
+export const StyledBox = muiStyled(Box)`
+    margin-top: 50px;
+`
+export const StyledDivider = muiStyled(Divider)`
+    border-bottom-width: 1px;
+    border-color: black;
+    width: 80%;
+`
 export const StyledFooter = muiStyled(Box)`
   padding: 30px 0;
 `

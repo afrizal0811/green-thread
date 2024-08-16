@@ -8,8 +8,8 @@ export const faqList = [
     answer: `Our products are made in factories that adhere to strict ethical standards. We prioritize working with manufacturers who ensure safe working conditions, fair wages, and no child labor. Transparency is important to us, and we are continually working to provide more information about our supply chain.`,
   },
   {
-    question: `How should I care for my GreenThreads clothing?`,
-    answer: `To ensure the longevity of your GreenThreads garments, we recommend following the care instructions on the label. Generally, washing in cold water, using eco-friendly detergents, and line drying are the best ways to maintain the quality and sustainability of our clothing.`,
+    question: `How should I care for my Green Threads clothing?`,
+    answer: `To ensure the longevity of your Green Threads garments, we recommend following the care instructions on the label. Generally, washing in cold water, using eco-friendly detergents, and line drying are the best ways to maintain the quality and sustainability of our clothing.`,
   },
   {
     question: `Do you offer international shipping?`,
@@ -25,11 +25,11 @@ export const faqList = [
   },
   {
     question: `How can I contact customer service?`,
-    answer: `Our customer service team is here to help! You can reach us via the Contact Us form on our website, or email us directly at support@greenthreads.com. We strive to respond to all inquiries within 24 hours.`,
+    answer: `Our customer service team is here to help! You can reach us via the Contact Us form on our website, or email us directly at support@Green Threads.com. We strive to respond to all inquiries within 24 hours.`,
   },
   {
     question: `Do you have physical stores?`,
-    answer: `Currently, GreenThreads is an online-only store. However, we occasionally participate in pop-up shops and eco-friendly market events. Follow us on social media or sign up for our newsletter to stay updated on our latest events and locations.`,
+    answer: `Currently, Green Threads is an online-only store. However, we occasionally participate in pop-up shops and eco-friendly market events. Follow us on social media or sign up for our newsletter to stay updated on our latest events and locations.`,
   },
   {
     question: `How can I stay updated on new arrivals and promotions?`,

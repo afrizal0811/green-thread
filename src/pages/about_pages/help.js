@@ -2,7 +2,7 @@ import imagePath from '../../constants/imagePaths'
 
 export const storyData = {
   title: `We offer versatile and timeless designs`,
-  text: `GreenThreads was started by friends who love fashion and care about
+  text: `Green Threads was started by friends who love fashion and care about
           the environment. We wanted to create stylish clothes that are also
           good for the planet. Our collections use eco-friendly materials and
           aim to be both trendy and long-lasting.`,

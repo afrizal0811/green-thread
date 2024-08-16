@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, ImageList, Typography } from '../../../../components/material_ui'
 import { StyledTitle } from '../../StyledComponents'
-import { imagesList } from './help'
+import { imagesList, aboutText } from './help'
 
 const AboutSection = () => {
   const renderSectionTitle = (
@@ -35,7 +35,7 @@ const AboutSection = () => {
           flexWrap='wrap'
           gap={2}
           justifyContent='center'
-          width={{ xs: 330, sm: 570, md: 600 }}
+          width={{ xs: 350, sm: 570, md: 450 }}
           sx={{ px: '20px' }}
         >
           {renderSectionTitle}
@@ -45,14 +45,7 @@ const AboutSection = () => {
             align='justify'
             variant='about'
           >
-            Founded by a group of friends passionate about both style and
-            environmental conservation, GreenThreads aims to redefine fashion by
-            placing sustainability at its core. We are committed to using
-            eco-friendly materials, ethical production practices, and low-impact
-            dyes to create high-quality clothing that respects both people and
-            the planet. Our collections offer versatile, timeless designs that
-            are as stylish as they are responsible. Join us on our journey to
-            make a positive impact, one garment at a time.
+            {aboutText}
           </Typography>
         </Box>
         <Box

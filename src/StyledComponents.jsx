@@ -1,16 +1,6 @@
 import { styled as muiStyled } from '@mui/material'
-import { Box, Button, Divider, Input } from './components/material_ui'
+import { Button, Input, Box } from './components/material_ui'
 import colors from './constants/colors'
-
-export const StyledBox = muiStyled(Box)`
-    margin-top: 50px;
-`
-
-export const StyledDivider = muiStyled(Divider)`
-    border-bottom-width: 1px;
-    border-color: black;
-    width: 80%;
-`
 
 export const StyledButton = muiStyled(Button)`
   background-color: ${colors.maize};
