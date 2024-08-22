@@ -1,13 +1,13 @@
 import React from 'react'
-import pagesLink from '../../constants/pagesLink'
+import { pagesLink } from '../../constants/lists'
 import BrandLogo from '../brand_logo/BrandLogo'
 import { Box, Typography } from '../material_ui'
 import {
+  StyledBox,
+  StyledDivider,
   StyledFooter,
   StyledIcon,
   StyledLink,
-  StyledDivider,
-  StyledBox,
 } from './StyledComponents'
 import { socialMedias } from './help'
 

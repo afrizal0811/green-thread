@@ -2,7 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import React, { useState } from 'react'
-import pagesLink from '../../constants/pagesLink'
+import { pagesLink } from '../../constants/lists'
 import BrandLogo from '../brand_logo/BrandLogo'
 import {
   Box,
