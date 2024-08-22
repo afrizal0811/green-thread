@@ -1,13 +1,16 @@
 import { styled as muiStyled } from '@mui/material'
 import MenuItem from '@mui/material/MenuItem'
 import colors from '../../../constants/colors'
+import muiBreakpoints from '../../../utilities/muiBreakpoints'
 
 export const StyledMenuItem = muiStyled(MenuItem)`
     &.Mui-selected {
-        background-color: transparent;
-        border-bottom: solid 2px black;
         font-weight: 700;
         ${(props) =>
           props.$isHome && `border-bottom: solid 2px ${colors.pastelGray}`};
-    }
+          ${(props) => muiBreakpoints(props, 'md')} {
+              border-bottom: solid 2px black;
+              background-color: transparent;
+          }
+        }
 `
