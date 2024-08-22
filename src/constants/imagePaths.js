@@ -12,6 +12,7 @@ const imagePath = {
   cart2: './images/cart-2.jpg',
   cart3: './images/cart-3.jpg',
   cart4: './images/cart-4.jpg',
+  cartIcon : './images/cart-icon.png',
   commitFairImg: './images/commit-fair.jpg',
   commitLowImpactImg: './images/commit-low-impact.jpg',
   commitOrganicImg: './images/commit-organic.jpg',

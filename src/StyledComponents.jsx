@@ -1,5 +1,5 @@
 import { styled as muiStyled } from '@mui/material'
-import { Button, Input, Box } from './components/material_ui'
+import { Button, Input } from './components/material_ui'
 import colors from './constants/colors'
 
 export const StyledButton = muiStyled(Button)`

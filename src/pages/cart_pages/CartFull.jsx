@@ -13,7 +13,7 @@ import numberFormatter from '../../utilities/numberFormatter'
 import { StyledImage, StyledWrapper } from './StyledComponents'
 import { cartList, deliveryTypeList } from './help'
 
-const CartPage = () => {
+const CartFull = () => {
   const [value, setValue] = useState('Standard')
   const [subtotal, setSubtotal] = useState(0)
   const delivery = deliveryTypeList.filter((data) => data.name === value)
@@ -32,7 +32,7 @@ const CartPage = () => {
       height='100%'
       justifyContent='center'
       key={data.id}
-      width='100%'
+      width='auto'
     >
       <Box
         display='flex'
@@ -52,7 +52,7 @@ const CartPage = () => {
       >
         <Box>
           <Typography
-            fontSize={{ xs: '22px', sm: '24px', lg: '30px' }}
+            fontSize={{ xs: '22px', sm: '24px', lg: '28px' }}
             variant='h5'
           >
             {data.name}
@@ -93,7 +93,7 @@ const CartPage = () => {
         sx={{ ml: { xs: 0, sm: 'auto' } }}
       >
         <Typography
-          fontSize={{ xs: '20px', sm: '24px', lg: '30px' }}
+          fontSize={{ xs: '20px', sm: '24px', lg: '28px' }}
           variant='h5'
         >
           {numberFormatter(data.price * data.quantity)}
@@ -217,15 +217,15 @@ const CartPage = () => {
       flexDirection='column'
       gap
       justifyContent='center'
-      sx={{ mt: '50px' }}
+      sx={{ mt: 5 }}
     >
-      <Typography variant='h4'>Cart</Typography>
       <Box
         display='flex'
         flexDirection={{ xs: 'column', lg: 'row' }}
         gap={2}
         justifyContent='center'
         width={{ xs: '90%', lg: 'auto' }}
+        sx={{ px: { sm: 0, lg: 5 } }}
       >
         <Box
           display='flex'
@@ -233,6 +233,7 @@ const CartPage = () => {
           gap={2}
           justifyContent='center'
           width={{ xs: '100%', lg: 'auto' }}
+          height='100%'
         >
           {cartList.map((data) => renderItem(data))}
         </Box>
@@ -242,4 +243,4 @@ const CartPage = () => {
   )
 }
 
-export default CartPage
+export default CartFull

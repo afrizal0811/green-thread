@@ -1,6 +1,11 @@
 import { styled as muiStyled } from '@mui/material'
 import { Box, Image } from '../../components/material_ui'
 import colors from '../../constants/colors'
+export const StyledCartIcon = muiStyled(Image)`
+    border-radius: 50%;
+    padding: 15px;
+    background-color: ${colors.maize};
+`
 export const StyledImage = muiStyled(Image)`
     border-radius: 10px;
 `

@@ -2,11 +2,11 @@ import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import AboutPage from './pages/about_pages/AboutPage'
-import CartPage from './pages/cart_pages/CartPage'
+import CartPage from './pages/cart_pages'
 import ContactPage from './pages/contact_pages/ContactPage'
+import HomePage from './pages/home_pages'
 import NotFoundPage from './pages/not_found_pages/NotFoundPage'
 import ShopPage from './pages/shop_pages/ShopPage'
-import HomePage from './pages/home_pages'
 const RouteHandler = () => {
   return (
     <Routes>
