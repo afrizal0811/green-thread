@@ -1,11 +1,9 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
 import React from 'react'
 import { Box, Typography } from '../../material_ui'
-import {
-  StyledAccordion,
-  StyledAccordionDetails,
-  StyledAccordionSummary,
-} from './StyledComponents'
 
 const MuiAccordion = (props) => {
   const { list, boxWidth } = props
@@ -18,8 +16,9 @@ const MuiAccordion = (props) => {
     >
       <Box width={boxWidth}>
         {list.map(({ question, answer }) => (
-          <StyledAccordion>
-            <StyledAccordionSummary
+          <Accordion className='!bg-transparent'>
+            <AccordionSummary
+              className='border-2 border-black !bg-pale-silver-dark hover:!bg-opacity-5'
               expandIcon={<ArrowDropDownIcon />}
               aria-controls={question}
               id={question}
@@ -30,11 +29,11 @@ const MuiAccordion = (props) => {
               >
                 {question}
               </Typography>
-            </StyledAccordionSummary>
-            <StyledAccordionDetails>
+            </AccordionSummary>
+            <AccordionDetails className='!bg-pale-silver'>
               <Typography variant='p'>{answer}</Typography>
-            </StyledAccordionDetails>
-          </StyledAccordion>
+            </AccordionDetails>
+          </Accordion>
         ))}
       </Box>
     </Box>

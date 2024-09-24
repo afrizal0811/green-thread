@@ -1,23 +1,20 @@
 import React from 'react'
+import { StyledButton, StyledInput } from '../../../../StyledComponents'
 import { Box, Typography } from '../../../../components/material_ui'
-import {
-  StyledNewsletterContent,
-  StyledNewsletterWrapper,
-  StyledSubsButton,
-  StyledSubsInput,
-} from './StyledComponents'
 
 const NewsletterSection = () => {
   return (
-    <StyledNewsletterWrapper
+    <Box
+      className='my-5'
       display='flex'
       alignItems='center'
       justifyContent='center'
     >
-      <StyledNewsletterContent
+      <Box
+        className='text-white bg-forest-green-dark rounded-xl p-10 mx-8 md:mx-0 w-full md:w-3/4'
         display='flex'
         flexDirection='column'
-        gap={3}
+        gap={4}
       >
         <div>
           <Typography
@@ -30,12 +27,12 @@ const NewsletterSection = () => {
             Subscribe
           </Typography>
           <Typography
+            className='pb-5'
             fontSize={{ xs: '34px', sm: '50px' }}
             fontWeight='400'
             variant='curly'
             component='h3'
             textAlign='center'
-            sx={{ pb: '20px' }}
           >
             Stay up to date
           </Typography>
@@ -52,18 +49,19 @@ const NewsletterSection = () => {
         <Box
           display='flex'
           flexDirection='column'
-          gap={2}
+          gap={3}
           alignItems='center'
           justifyContent='center'
         >
-          <StyledSubsInput
+          <StyledInput
             label='Email'
             variant='filled'
+            className='w-full md:w-3/4'
           />
-          <StyledSubsButton
+          <StyledButton
             variant='contained'
             text='Subscribe'
-            sx={{ width: { xs: '100%', sm: '70%' } }}
+            className='!text-base w-full md:w-3/4 !rounded-full'
           />
         </Box>
         <Typography
@@ -76,8 +74,8 @@ const NewsletterSection = () => {
           By subscribing, you consent to us sending you emails from Green
           Threads.
         </Typography>
-      </StyledNewsletterContent>
-    </StyledNewsletterWrapper>
+      </Box>
+    </Box>
   )
 }
 

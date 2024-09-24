@@ -1,13 +1,12 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { StyledButton } from '../../StyledComponents'
-import { Box, Typography } from '../../components/material_ui'
+import { Box, Image, Typography } from '../../components/material_ui'
 import imagePath from '../../constants/imagePaths'
-import { StyledCartIcon } from './StyledComponents'
 
 const CartEmpty = () => {
   const { navigate } = useOutletContext()
-  
+
   return (
     <Box
       alignItems='center'
@@ -15,12 +14,13 @@ const CartEmpty = () => {
       flexDirection='column'
       gap={10}
       justifyContent='center'
-      sx={{ px: 5 }}
+      className='px-5'
     >
-      <StyledCartIcon
+      <Image
         height={150}
         width={150}
         src={imagePath.cartIcon}
+        className='rounded-full p-4 bg-maize'
       />
       <Box
         alignItems='center'
@@ -45,6 +45,7 @@ const CartEmpty = () => {
         <StyledButton
           variant='contained'
           text='Shop Now'
+          className='w-[150px] !text-base'
           onClick={() => navigate('/shop')}
         />
       </Box>

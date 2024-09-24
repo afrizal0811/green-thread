@@ -1,17 +1,17 @@
 import React from 'react'
-import { Box, ImageList, Typography } from '../../../../components/material_ui'
-import { StyledTitle } from '../../StyledComponents'
 import {
-  StyledImage,
-  StyledImageListWrapper,
-  StyledImageWrapper,
-} from './StyledComponents'
+  Box,
+  Image,
+  ImageList,
+  Typography,
+} from '../../../../components/material_ui'
 import { sustainCommitImages } from './help'
 
 const SustainCommitSection = () => {
   const renderImage = (
-    <StyledImageWrapper
-      display='flex'
+    <Box
+      className='w-full mx-6'
+      display={{ xs: 'none', sm: 'flex' }}
       flexDirection='column'
       gap={2}
     >
@@ -27,9 +27,9 @@ const SustainCommitSection = () => {
             key={data.id}
             width='100%'
           >
-            <StyledImage
-              $isEven={isEven}
+            <Image
               src={data.src}
+              className='drop-shadow-xl w-[300px] h-[300px] rounded-xl object-cover'
             />
             <Box
               alignItems={isEven ? 'flex-end' : 'flex-start'}
@@ -49,11 +49,11 @@ const SustainCommitSection = () => {
           </Box>
         )
       })}
-    </StyledImageWrapper>
+    </Box>
   )
 
   const renderImageList = (
-    <StyledImageListWrapper>
+    <Box display={{ xs: 'flex', sm: 'none' }}>
       <ImageList
         cols={1}
         gap={20}
@@ -62,7 +62,7 @@ const SustainCommitSection = () => {
         item={sustainCommitImages}
         width='300px'
       />
-    </StyledImageListWrapper>
+    </Box>
   )
 
   return (
@@ -72,7 +72,6 @@ const SustainCommitSection = () => {
       flexDirection='column'
       gap={5}
       justifyContent='center'
-      sx={{ mb: 5 }}
     >
       <Typography
         fontSize={{ xs: '30px', sm: '36px' }}
@@ -80,7 +79,8 @@ const SustainCommitSection = () => {
         variant='h3'
         textAlign='center'
       >
-        <StyledTitle>Sustainability</StyledTitle> Commitments
+        <span className='text-forest-green-dark'>Green Threads</span>{' '}
+        Commitments
       </Typography>
       <Box
         alignItems='center'

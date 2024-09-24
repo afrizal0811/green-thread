@@ -1,5 +1,32 @@
 import imagePath from '../../../../constants/imagePaths'
 
+export const carouselSetting = {
+  autoplay: true,
+  autoplaySpeed: 10000,
+  dots: true,
+  infinite: true,
+  initialSlide: 0,
+  slidesToScroll: 3,
+  slidesToShow: 3,
+  speed: 1000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+}
+
 export const productsList = [
   {
     id: 1,

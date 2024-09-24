@@ -1,7 +1,6 @@
 import React from 'react'
 import imagePath from '../../constants/imagePaths'
 import { Box, Image, Typography } from '../material_ui'
-import { StyledLogoContent } from './StyledComponents'
 const BrandLogo = (props) => {
   const {
     display,
@@ -20,7 +19,9 @@ const BrandLogo = (props) => {
       flexGrow={flexGrow}
       justifyContent={justifyContent}
     >
-      <StyledLogoContent
+      <Box
+        alignItems='center'
+        className='cursor-pointer hover:bg-black hover:bg-opacity-5'
         display='flex'
         gap
         onClick={() => navigate('/')}
@@ -33,14 +34,11 @@ const BrandLogo = (props) => {
         />
         <Typography
           fontSize={fontSize}
-          sx={{
-            pt: '10px',
-          }}
           variant='h5'
         >
           Green Threads
         </Typography>
-      </StyledLogoContent>
+      </Box>
     </Box>
   )
 }

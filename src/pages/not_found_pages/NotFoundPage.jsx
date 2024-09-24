@@ -1,8 +1,7 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { StyledButton } from '../../StyledComponents'
 import { Box, Typography } from '../../components/material_ui'
-import { StyledBackButton, StyledWrapper } from './StyledComponents'
-
 const NotFoundPage = () => {
   const { navigate } = useOutletContext()
   return (
@@ -10,8 +9,9 @@ const NotFoundPage = () => {
       display='flex'
       justifyContent='center'
       alignItems='center'
+      className='h-screen text-black'
     >
-      <StyledWrapper
+      <Box
         display='flex'
         flexDirection='column'
         justifyContent='center'
@@ -20,12 +20,13 @@ const NotFoundPage = () => {
       >
         <Typography variant='giant'>404</Typography>
         <Typography variant='h3'>Page Not Found</Typography>
-        <StyledBackButton
+        <StyledButton
+          className='!text-base w-1/4 !rounded-full !mt-4'
           variant='contained'
           text='Home'
           onClick={() => navigate('/')}
         />
-      </StyledWrapper>
+      </Box>
     </Box>
   )
 }

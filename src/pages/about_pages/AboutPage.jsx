@@ -1,13 +1,6 @@
 import React from 'react'
-import { Box, Typography } from '../../components/material_ui'
+import { Box, Image, Typography } from '../../components/material_ui'
 import imagePath from '../../constants/imagePaths'
-import {
-  StyledCoreWrapper,
-  StyledIcon,
-  StyledIconWrapper,
-  StyledOfficeImage,
-  StyledPortrait,
-} from './StyledComponents'
 import { commitList, coreData, storyData, teamData, teamList } from './help'
 
 const AboutPage = () => {
@@ -20,8 +13,8 @@ const AboutPage = () => {
       >
         <Typography variant='h2'>{title}</Typography>
         <Typography
+          className='w-full md:w-3/5'
           variant='p'
-          sx={{ width: { xs: '100%', sm: '60%' } }}
         >
           {text}
         </Typography>
@@ -33,31 +26,39 @@ const AboutPage = () => {
       display='flex'
       flexDirection='column'
       gap={5}
-      sx={{ mx: '20px' }}
+      className='h-screen text-white mx-5 md:mx-10'
+      alignItems='center'
+      justifyContent='center'
     >
-      {renderTitle(storyData.title, storyData.text)}
-      <StyledOfficeImage src={imagePath.office} />
+      <div
+        className='bg-no-repeat bg-top bg-cover absolute w-full h-screen -z-10 text-white overflow-hidden brightness-50 rounded-b-[50%_20%]'
+        style={{
+          backgroundImage: `url(${imagePath.office})`,
+        }}
+      />
+      <Box className=''>{renderTitle(storyData.title, storyData.text)}</Box>
     </Box>
   )
   const renderCore = (
     <Box
+      className='mx-5 md:mx-10'
       display='flex'
       flexDirection='column'
       gap={5}
-      sx={{ mx: '20px', mt: { xs: '-30px', sm: '-80px' } }}
     >
       {renderTitle(coreData.title, coreData.text)}
-      <StyledCoreWrapper
+      <Box
         alignItems='stretch'
         display='flex'
         flexDirection='row'
         flexWrap='wrap'
         gap={5}
         justifyContent='center'
-        sx={{ mx: '20px' }}
+        className='*:flex-core'
       >
         {commitList.map((item) => (
-          <StyledIconWrapper
+          <Box
+            className='bg-white p-12'
             alignItems='center'
             display='flex'
             flexDirection='column'
@@ -65,7 +66,9 @@ const AboutPage = () => {
             justifyContent='center'
             key={item.id}
           >
-            <StyledIcon
+            <Image
+              alt={item.name}
+              className='aspect-square object-scale-down filter grayscale'
               height='auto'
               src={item.src}
               width={200}
@@ -79,17 +82,17 @@ const AboutPage = () => {
               </Typography>
               <Typography variant='p'>{item.text}</Typography>
             </Box>
-          </StyledIconWrapper>
+          </Box>
         ))}
-      </StyledCoreWrapper>
+      </Box>
     </Box>
   )
   const renderTeamList = (
     <Box
+      className='mx-5 md:mx-10'
       display='flex'
       flexDirection='column'
       gap={5}
-      sx={{ mx: '20px' }}
     >
       {renderTitle(teamData.title, teamData.text)}
       <Box
@@ -103,13 +106,16 @@ const AboutPage = () => {
         {teamList.map((item) => (
           <Box key={item.id}>
             <Box
+              className='mb-4'
               display='flex'
               flexDirection='column'
               gap={2}
-              sx={{ mb: '20px' }}
               width='100%'
             >
-              <StyledPortrait src={item.src} />
+              <Image
+                className='w-[300px] h-[350px] object-cover shadow-md md:w-[200px] md:h-[250px] lg:w-[300px] lg:h-[350px]'
+                src={item.src}
+              />
               <Typography variant='p'>{item.name}</Typography>
             </Box>
           </Box>
@@ -123,7 +129,6 @@ const AboutPage = () => {
       display='flex'
       flexDirection='column'
       gap={5}
-      sx={{ mt: '50px' }}
       width='100%'
     >
       {renderStory}

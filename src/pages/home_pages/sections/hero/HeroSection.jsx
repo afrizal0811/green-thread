@@ -1,22 +1,23 @@
 import React from 'react'
+import { StyledButton } from '../../../../StyledComponents'
 import { Box, Typography } from '../../../../components/material_ui'
 import imagePath from '../../../../constants/imagePaths'
-import {
-  StyledHeroButton,
-  StyledHeroImage,
-  StyledHeroWrapper,
-} from './StyledComponents'
-
 const Hero = () => {
   return (
     <Box>
-      <StyledHeroImage $src={imagePath.heroImage} />
-      <StyledHeroWrapper
+      <div
+        className='bg-no-repeat bg-top bg-cover absolute w-full h-screen -z-10 text-white overflow-hidden brightness-[80%] rounded-b-[50%_20%] drop-shadow-xl'
+        style={{
+          backgroundImage: `url(${imagePath.heroImage})`,
+        }}
+      />
+      <Box
         alignItems={{ xs: 'center', md: 'start' }}
         display='flex'
         flexDirection='column'
         gap={2}
         justifyContent='center'
+        className='text-white h-screen ml-0 md:ml-10'
       >
         <Box
           alignItems={{ xs: 'center', md: 'start' }}
@@ -53,12 +54,13 @@ const Hero = () => {
             <br />
             Shop our eco-friendly collection now.
           </Typography>
-          <StyledHeroButton
+          <StyledButton
+            className='w-[150px] !text-base'
             text='Shop Now'
             variant='contained'
           />
         </Box>
-      </StyledHeroWrapper>
+      </Box>
     </Box>
   )
 }

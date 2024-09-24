@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { pagesLink } from '../../constants/lists'
 import BrandLogo from '../brand_logo/BrandLogo'
 import {
+  Avatar,
   Box,
   Container,
   Divider,
@@ -12,20 +13,15 @@ import {
   MenuItem,
   Tooltip,
 } from '../material_ui'
-import {
-  StyledAppBar,
-  StyledAvatar,
-  StyledAvatarIcon,
-  StyledUserMenu,
-} from './StyledComponents'
-import { pageMenu, settings, userMenu } from './help'
+import { StyledAppBar } from './StyledComponents'
+import { heroPages, pageMenu, settings, userMenu } from './help'
 
 const NavigationMenu = (props) => {
   const { children, context } = props
   const { navigate, pathname } = context
   const [anchorElNav, setAnchorElNav] = useState(null)
   const [anchorElUser, setAnchorElUser] = useState(null)
-  const isHome = pathname === '/'
+  const isHasHeroImage = heroPages.includes(pathname)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -59,9 +55,9 @@ const NavigationMenu = (props) => {
 
   const mappedPages = pagesLink.map((page) => (
     <MenuItem
-      isHome={isHome}
+      isHasHeroImage={isHasHeroImage}
       key={page}
-      onClick={() => handlePageChange(page)}
+      onClick={() => handlePageChange(page.toLocaleLowerCase())}
       selected={pathname === `/${page}`}
       text={page}
       textAlign='center'
@@ -112,11 +108,18 @@ const NavigationMenu = (props) => {
   const renderUserMenu = (
     <Box>
       <Tooltip title='User Options'>
-        <StyledAvatarIcon onClick={handleOpenUserMenu}>
-          <StyledAvatar alt='Remy Sharp' />
-        </StyledAvatarIcon>
+        <IconButton
+          className='flex gap-3'
+          onClick={handleOpenUserMenu}
+        >
+          <Avatar
+            alt='Remy Sharp'
+            className='!w-6 !h-6'
+          />
+        </IconButton>
       </Tooltip>
-      <StyledUserMenu
+      <Menu
+        className='mt-11'
         anchorEl={anchorElUser}
         anchorOrigin={userMenu.anchorOrigin}
         id='menu-appbar'
@@ -133,13 +136,13 @@ const NavigationMenu = (props) => {
         />
         <Divider />
         {mappedUserSettings}
-      </StyledUserMenu>
+      </Menu>
     </Box>
   )
 
   return (
     <Box>
-      <StyledAppBar $isHome={isHome}>
+      <StyledAppBar $isHasHeroImage={isHasHeroImage}>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             {renderBrandLogo(true)}

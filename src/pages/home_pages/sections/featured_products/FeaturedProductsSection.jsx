@@ -1,34 +1,31 @@
 import React from 'react'
+import { StyledButton } from '../../../../StyledComponents'
 import { Box, Card, Typography } from '../../../../components/material_ui'
 import colors from '../../../../constants/colors'
-import { StyledFeaturedButton, StyledProductsWrapper } from './StyledComponents'
 import { productsList } from './help'
 
 const FeaturedProductsSection = () => {
   return (
-    <StyledProductsWrapper
+    <Box
       alignItems='center'
       display='flex'
       flexDirection='column'
       gap
       justifyContent='center'
+      className='p-10 mt-0 md:mt-10 bg-forest-green-dark'
     >
       <Typography
         color={colors.white}
         fontSize={{ xs: '30px', sm: '40px' }}
-        sx={{ mb: '10px' }}
         variant='h3'
       >
         Featured Products
       </Typography>
       <Typography
+        className='w-full md:w-3/5 !mb-5'
         align='center'
         color={colors.white}
         fontSize={{ xs: '16px' }}
-        sx={{
-          width: { xs: '70%', md: '60%' },
-          mb: '20px',
-        }}
         variant='p'
       >
         Explore our top picks from the latest collection. Each item is selected
@@ -53,11 +50,12 @@ const FeaturedProductsSection = () => {
           />
         ))}
       </Box>
-      <StyledFeaturedButton
+      <StyledButton
         text='Shop Now'
         variant='contained'
+        className='!text-base !mt-5 !p-2 w-[200px] h-[50px]'
       />
-    </StyledProductsWrapper>
+    </Box>
   )
 }
 

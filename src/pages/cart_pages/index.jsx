@@ -27,7 +27,7 @@ const CartPage = () => {
         flexDirection='column'
         gap={2}
         justifyContent='center'
-        sx={{ border: 'solid 2px black', p: 5 }}
+        className='border-2 border-black p-10'
         width={{ xs: '90%', sm: 'auto' }}
       >
         <Typography
@@ -45,8 +45,8 @@ const CartPage = () => {
           Press the button to change the cart
         </Typography>
         <StyledButton
+        className='!text-base w-3/4'
           onClick={() => setIsClicked(!isClicked)}
-          sx={{ width: '50%' }}
           text={isClicked ? 'Emptied Cart' : 'Filled Cart'}
           variant='contained'
         />

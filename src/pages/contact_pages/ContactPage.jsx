@@ -1,11 +1,11 @@
 import React from 'react'
+import { StyledButton, StyledInput } from '../../StyledComponents'
 import {
   Accordion,
   Box,
   Divider,
   Typography,
 } from '../../components/material_ui'
-import { StyledContactButton, StyledContactInput } from './StyledComponents'
 import { faqList } from './help'
 
 const ContactPage = () => {
@@ -17,12 +17,12 @@ const ContactPage = () => {
       gap={3}
       justifyContent='center'
       width='100%'
-      sx={{ mt: { xs: '30px', md: '0' } }}
+      className='mt-7 lg:mt-0'
     >
       <Typography
         fontSize='20px'
         fontWeight='500'
-        sx={{ width: '80%' }}
+        className='!w-4/5'
         textAlign='justify'
         variant='p'
       >
@@ -30,21 +30,27 @@ const ContactPage = () => {
         here to help and can't wait to make your shopping spree with Green
         Threads as awesome as finding cash in your old jeans!
       </Typography>
-      <StyledContactInput
+      <StyledInput
+        className='w-4/5'
         label='Name'
         variant='filled'
       />
-      <StyledContactInput
+      <StyledInput
+        className='w-4/5'
         label='Email'
         variant='filled'
       />
-      <StyledContactInput
+      <StyledInput
+        className='w-4/5'
         label='Message'
         variant='filled'
         multiline
         rows={6}
       />
-      <StyledContactButton text='Send' />
+      <StyledButton
+        className='w-4/5 !rounded-full py-3 px-6 !text-base '
+        text='Send'
+      />
     </Box>
   )
   const renderFaq = (
@@ -75,14 +81,13 @@ const ContactPage = () => {
       justifyContent='space-around'
       width='100%'
       height={{ xs: 'auto', md: '900px', lg: '100dvh' }}
-      gap={{ xs: 5, md: 0 }}
-      sx={{ mt: { xs: 0, md: '20px' } }}
+      gap={{ xs: 7, md: 0 }}
     >
       {renderContactForm}
       <Divider
         flexItem
         orientation='vertical'
-        sx={{ display: { xs: 'none', md: 'block' } }}
+        className='hidden md:block'
       />
       {renderFaq}
     </Box>

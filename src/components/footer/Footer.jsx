@@ -1,16 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { pagesLink } from '../../constants/lists'
 import BrandLogo from '../brand_logo/BrandLogo'
-import { Box, Typography } from '../material_ui'
-import {
-  StyledBox,
-  StyledDivider,
-  StyledFooter,
-  StyledIcon,
-  StyledLink,
-} from './StyledComponents'
+import { Box, Divider, Typography } from '../material_ui'
 import { socialMedias } from './help'
-
 const Footer = (props) => {
   const { context } = props
   const { navigate } = context
@@ -29,13 +22,14 @@ const Footer = (props) => {
           target='_blank'
           rel='noreferrer'
         >
-          <StyledIcon
+          <Box
+            className='rounded-full bg-transparent border-2 border-black w-[50px] h-[50px] hover:bg-forest-green-dark hover:border-forest-green-dark hover:text-pastel-gray cursor-pointer transition ease-in-out duration-200'
             display='flex'
             alignItems='center'
             justifyContent='center'
           >
             {data.icon}
-          </StyledIcon>
+          </Box>
         </a>
       ))}
     </Box>
@@ -49,28 +43,30 @@ const Footer = (props) => {
       gap={{ xs: 2, sm: 4 }}
     >
       {pagesLink.map((data) => (
-        <StyledLink
+        <Link
           key={data}
           to={`/${data}`}
         >
           <Typography variant='p'>{data}</Typography>
-        </StyledLink>
+        </Link>
       ))}
     </Box>
   )
 
   return (
     <Box>
-      <StyledBox
+      <Box
+        className='mt-12'
         display='flex'
         justifyContent='center'
       >
-        <StyledDivider />
-      </StyledBox>
-      <StyledFooter
+        <Divider className='w-4/5 !border-black ' />
+      </Box>
+      <Box
         display='flex'
         flexDirection='column'
         gap={3}
+        className='py-8'
       >
         <BrandLogo
           display='flex'
@@ -82,7 +78,7 @@ const Footer = (props) => {
         />
         {renderSocialMedias}
         {renderLinks}
-      </StyledFooter>
+      </Box>
     </Box>
   )
 }

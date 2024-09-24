@@ -2,10 +2,10 @@ import Typography from '@mui/material/Typography'
 import React from 'react'
 import { StyledMenuItem } from './StyledComponents'
 const MuiMenuItem = (props) => {
-  const { text, key, onClick, textAlign, selected, isHome } = props
+  const { text, key, onClick, textAlign, selected, isHasHeroImage } = props
   return (
     <StyledMenuItem
-      $isHome={isHome}
+      $isHasHeroImage={isHasHeroImage}
       key={key}
       onClick={onClick}
       selected={selected}

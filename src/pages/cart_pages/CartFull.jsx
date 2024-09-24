@@ -3,6 +3,7 @@ import { StyledButton } from '../../StyledComponents'
 import {
   Box,
   Divider,
+  Image,
   Input,
   RadioButton,
   Select,
@@ -10,7 +11,6 @@ import {
 } from '../../components/material_ui'
 import { clothesColor, clothesSize } from '../../constants/lists'
 import numberFormatter from '../../utilities/numberFormatter'
-import { StyledImage, StyledWrapper } from './StyledComponents'
 import { cartList, deliveryTypeList } from './help'
 
 const CartFull = () => {
@@ -25,23 +25,23 @@ const CartFull = () => {
   }, [])
 
   const renderItem = (data) => (
-    <StyledWrapper
+    <Box
       display='flex'
       flexDirection={{ xs: 'column', sm: 'row' }}
-      gap={3}
-      height='100%'
+      gap={5}
       justifyContent='center'
       key={data.id}
-      width='auto'
+      className='w-full h-full bg-pale-silver rounded p-7 shadow-md'
     >
       <Box
         display='flex'
         justifyContent='center'
       >
-        <StyledImage
-          height={{ xs: 200, sm: 100, lg: 150 }}
+        <Image
+          className='rounded-md aspect-square'
+          height={{ xs: 200, sm: 150 }}
           src={data.image}
-          width={{ xs: 200, sm: 100, lg: 150 }}
+          width={{ xs: 200, sm: 150}}
         />
       </Box>
       <Box
@@ -49,6 +49,7 @@ const CartFull = () => {
         flexDirection='column'
         gap={5}
         justifyContent='space-evenly'
+        
       >
         <Box>
           <Typography
@@ -90,7 +91,7 @@ const CartFull = () => {
         flexDirection='column'
         gap={{ xs: 2, sm: 5 }}
         justifyContent='space-between'
-        sx={{ ml: { xs: 0, sm: 'auto' } }}
+        className='ml-0 sm:ml-auto'
       >
         <Typography
           fontSize={{ xs: '20px', sm: '24px', lg: '28px' }}
@@ -99,12 +100,12 @@ const CartFull = () => {
           {numberFormatter(data.price * data.quantity)}
         </Typography>
         <StyledButton
-          sx={{ width: 'auto', ml: { xs: 0, sm: 'auto' } }}
+          className='w-auto !text-base'
           text='Delete'
           variant='contained'
         />
       </Box>
-    </StyledWrapper>
+    </Box>
   )
 
   const renderText = (title, number, isBold = false) => (
@@ -131,10 +132,11 @@ const CartFull = () => {
   )
 
   const renderCheckout = (
-    <StyledWrapper
+    <Box
       display='flex'
       flexDirection='column'
       gap={3}
+      className='w-auto h-full bg-pale-silver rounded p-7 shadow-md'
     >
       <Typography variant='h5'>Checkout</Typography>
       <Box
@@ -183,11 +185,12 @@ const CartFull = () => {
         <Input
           label='Promo Code'
           name='Promo Code'
-          sx={{ width: '100%' }}
+          className='w-full'
         />
         <StyledButton
           text='Apply'
           variant='contained'
+          className='!text-base'
         />
       </Box>
       <Divider />
@@ -203,12 +206,12 @@ const CartFull = () => {
         width='100%'
       >
         <StyledButton
-          sx={{ width: { lg: '100%' } }}
+          className='w-auto lg:w-full !text-base'
           text='Checkout'
           variant='contained'
         />
       </Box>
-    </StyledWrapper>
+    </Box>
   )
   return (
     <Box
@@ -217,22 +220,22 @@ const CartFull = () => {
       flexDirection='column'
       gap
       justifyContent='center'
-      sx={{ mt: 5 }}
+      className='mt-7'
     >
       <Box
         display='flex'
         flexDirection={{ xs: 'column', lg: 'row' }}
         gap={2}
         justifyContent='center'
-        width={{ xs: '90%', lg: 'auto' }}
-        sx={{ px: { sm: 0, lg: 5 } }}
+        width={{ xs: '100%', lg: 'auto' }}
+        className='px-7'
       >
         <Box
           display='flex'
           flexDirection='column'
           gap={2}
           justifyContent='center'
-          width={{ xs: '100%', lg: 'auto' }}
+          width={{ xs: '100%', sm: 'auto' }}
           height='100%'
         >
           {cartList.map((data) => renderItem(data))}

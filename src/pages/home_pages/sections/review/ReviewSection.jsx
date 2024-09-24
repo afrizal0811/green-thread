@@ -6,8 +6,6 @@ import {
   Rating,
   Typography,
 } from '../../../../components/material_ui'
-import { StyledTitle } from '../../StyledComponents'
-import { StyledReview, StyledReviewrapper } from './StyledComponents'
 import { carouselSetting, reviewsList } from './help'
 
 const ReviewSection = () => {
@@ -20,17 +18,18 @@ const ReviewSection = () => {
       justifyContent='center'
     >
       <Typography
+        className='!mb-5'
         fontSize={{ xs: '30px', sm: '36px' }}
         fontWeight='700'
         variant='h3'
         textAlign='center'
-        sx={{ mb: '20px' }}
       >
-        What <StyledTitle>Clients</StyledTitle> Say!
+        What <span className='text-forest-green-dark'>Green Threads</span> Say!
       </Typography>
       <Carousel settings={carouselSetting}>
         {reviewsList.map((data) => (
-          <StyledReviewrapper
+          <Box
+            className='mb-5 drop-shadow-xl'
             alignItems='center'
             display='flex'
             flexDirection='column'
@@ -38,9 +37,10 @@ const ReviewSection = () => {
             <Avatar
               src={data.src}
               alt={data.name}
-              sx={{ width: 150, height: 150, border: '5px solid white' }}
+              className='!w-[150px] !h-[150px] border-8 border-white rounded-full'
             />
-            <StyledReview
+            <Box
+              className='bg-white rounded-xl h-[350px] w-[300px] p-[50px_20px_20px] -mt-12'
               alignItems='center'
               display='flex'
               flexDirection='column'
@@ -69,8 +69,8 @@ const ReviewSection = () => {
                 size='large'
                 value={data.star}
               />
-            </StyledReview>
-          </StyledReviewrapper>
+            </Box>
+          </Box>
         ))}
       </Carousel>
     </Box>

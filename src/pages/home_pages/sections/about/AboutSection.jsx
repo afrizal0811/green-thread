@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, ImageList, Typography } from '../../../../components/material_ui'
-import { StyledTitle } from '../../StyledComponents'
-import { imagesList, aboutText } from './help'
+import { aboutText, imagesList } from './help'
 
 const AboutSection = () => {
   const renderSectionTitle = (
@@ -11,7 +10,7 @@ const AboutSection = () => {
       gap
     >
       <Typography variant='h4'>
-        Welcome to <StyledTitle>Green Threads</StyledTitle>
+        Welcome to <span className='text-forest-green-dark'>Green Threads</span>
       </Typography>
     </Box>
   )
@@ -26,17 +25,17 @@ const AboutSection = () => {
         display='flex'
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
         justifyContent='space-evenly'
-        gap={{ xs: '20px' }}
+        gap
         width='100%'
       >
         <Box
+          className='px-5 md:px-0'
           display='flex'
           flexDirection='column'
           flexWrap='wrap'
           gap={2}
           justifyContent='center'
           width={{ xs: 350, sm: 570, md: 450 }}
-          sx={{ px: '20px' }}
         >
           {renderSectionTitle}
           <Typography
@@ -48,9 +47,7 @@ const AboutSection = () => {
             {aboutText}
           </Typography>
         </Box>
-        <Box
-          sx={{ width: { xs: '70%', md: '40%' }, pt: { xs: 0, md: '50px' } }}
-        >
+        <Box className='w-3/4 md:w-2/5 pt-0 md:pt-12'>
           <ImageList
             item={imagesList}
             variant='masonry'

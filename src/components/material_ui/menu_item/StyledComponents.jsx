@@ -7,7 +7,8 @@ export const StyledMenuItem = muiStyled(MenuItem)`
     &.Mui-selected {
         font-weight: 700;
         ${(props) =>
-          props.$isHome && `border-bottom: solid 2px ${colors.pastelGray}`};
+          props.$isHasHeroImage &&
+          `border-bottom: solid 2px ${colors.pastelGray}`};
           ${(props) => muiBreakpoints(props, 'md')} {
               border-bottom: solid 2px black;
               background-color: transparent;
