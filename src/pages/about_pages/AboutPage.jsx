@@ -31,7 +31,7 @@ const AboutPage = () => {
       justifyContent='center'
     >
       <div
-        className='bg-no-repeat bg-top bg-cover absolute w-full h-screen -z-10 text-white overflow-hidden brightness-50 rounded-b-[50%_20%]'
+        className='bg-no-repeat bg-top bg-cover absolute w-full h-screen -z-10 text-white overflow-hidden brightness-50 rounded-b-[50%_20%] drop-shadow-xl'
         style={{
           backgroundImage: `url(${imagePath.office})`,
         }}
@@ -58,7 +58,7 @@ const AboutPage = () => {
       >
         {commitList.map((item) => (
           <Box
-            className='bg-white p-12'
+            className='bg-white p-12 drop-shadow-lg'
             alignItems='center'
             display='flex'
             flexDirection='column'
@@ -106,7 +106,7 @@ const AboutPage = () => {
         {teamList.map((item) => (
           <Box key={item.id}>
             <Box
-              className='mb-4'
+              className='mb-4 drop-shadow-lg'
               display='flex'
               flexDirection='column'
               gap={2}

@@ -5,7 +5,7 @@ import { Box, Typography } from '../../../../components/material_ui'
 const NewsletterSection = () => {
   return (
     <Box
-      className='my-5'
+      className='my-5 drop-shadow-xl '
       display='flex'
       alignItems='center'
       justifyContent='center'
