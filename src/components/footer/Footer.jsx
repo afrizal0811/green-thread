@@ -4,6 +4,7 @@ import { pagesLink } from '../../constants/lists'
 import BrandLogo from '../brand_logo/BrandLogo'
 import { Box, Divider, Typography } from '../material_ui'
 import { socialMedias } from './help'
+
 const Footer = (props) => {
   const { context } = props
   const { navigate } = context
@@ -45,7 +46,7 @@ const Footer = (props) => {
       {pagesLink.map((data) => (
         <Link
           key={data}
-          to={`/${data}`}
+          to={`/${data.toLocaleLowerCase()}`}
         >
           <Typography variant='p'>{data}</Typography>
         </Link>
